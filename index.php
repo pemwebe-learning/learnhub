@@ -6,8 +6,8 @@ table, th, td {
 }
 </style>
 <body>
-
-<h2>A basic HTML table</h2>
+<h1>Tapir Gaming</h1>
+<h2>Nama anggota</h2>
 
 <table style="width:100%">
   <tr>
