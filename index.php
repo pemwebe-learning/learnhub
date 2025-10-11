@@ -11,7 +11,7 @@ table, th, td {
 
 <table style="width:100%">
   <tr>
-    <th>Company</th>
+    <th>prayoga</th>
     <th>Contact</th>
     <th>Country</th>
   </tr>
