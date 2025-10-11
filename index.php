@@ -15,7 +15,7 @@ table, th, td {
 <table style="width:100%">
   <tr>
     <th>prayoga</th>
-    <th>Contact</th>
+    <th>diki</th>
     <th>Country</th>
   </tr>
   <tr>
