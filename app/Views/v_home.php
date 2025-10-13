@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WEBSITE E-LEARNING SMK PERMATA BANGSA</title>
-  <link rel="stylesheet" href="<?= base_url('css/home')?>">
+  <link rel="stylesheet" href="<?= base_url('css/home.css')?>">
 </head>
 <body>
 
