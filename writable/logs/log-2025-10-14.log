@@ -1,0 +1,248 @@
+CRITICAL - 2025-10-14 14:25:01 --> ErrorException: Undefined variable $page
+[Method: GET, Route: admin]
+in APPPATH\Views\v_template_admin.php on line 157.
+ 1 APPPATH\Views\v_template_admin.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php', 157)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 5 APPPATH\Controllers\Admin.php(16): view('v_template_admin')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-14 14:29:04 --> ErrorException: Undefined variable $page
+[Method: GET, Route: admin]
+in APPPATH\Views\v_template_admin.php on line 157.
+ 1 APPPATH\Views\v_template_admin.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php', 157)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 5 APPPATH\Controllers\Admin.php(16): view('v_template_admin')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-14 14:29:06 --> ErrorException: Undefined variable $page
+[Method: GET, Route: admin]
+in APPPATH\Views\v_template_admin.php on line 157.
+ 1 APPPATH\Views\v_template_admin.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php', 157)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 5 APPPATH\Controllers\Admin.php(16): view('v_template_admin')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-14 14:29:12 --> ErrorException: Undefined variable $page
+[Method: GET, Route: admin]
+in APPPATH\Views\v_template_admin.php on line 157.
+ 1 APPPATH\Views\v_template_admin.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php', 157)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 5 APPPATH\Controllers\Admin.php(16): view('v_template_admin')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-14 14:31:59 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/v_dasboard_admin.php"
+[Method: GET, Route: admin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/v_dasboard_admin.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/v_dasboard_admin', [], true)
+ 3 APPPATH\Views\v_template_admin.php(158): view('admin/v_dasboard_admin')
+ 4 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 7 APPPATH\Controllers\Admin.php(16): view('v_template_admin', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-14 14:32:02 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/v_dasboard_admin.php"
+[Method: GET, Route: admin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/v_dasboard_admin.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/v_dasboard_admin', [], true)
+ 3 APPPATH\Views\v_template_admin.php(158): view('admin/v_dasboard_admin')
+ 4 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 7 APPPATH\Controllers\Admin.php(16): view('v_template_admin', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-14 14:32:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/v_dasboard_admin.php"
+[Method: GET, Route: admin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/v_dasboard_admin.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/v_dasboard_admin', [], true)
+ 3 APPPATH\Views\v_template_admin.php(158): view('admin/v_dasboard_admin')
+ 4 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 7 APPPATH\Controllers\Admin.php(16): view('v_template_admin', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-14 14:32:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/v_dasboard_admin.php"
+[Method: GET, Route: admin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/v_dasboard_admin.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/v_dasboard_admin', [], true)
+ 3 APPPATH\Views\v_template_admin.php(158): view('admin/v_dasboard_admin')
+ 4 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 7 APPPATH\Controllers\Admin.php(16): view('v_template_admin', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-14 14:32:51 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/v_dasboard_admin.php"
+[Method: GET, Route: admin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/v_dasboard_admin.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/v_dasboard_admin', [], true)
+ 3 APPPATH\Views\v_template_admin.php(158): view('admin/v_dasboard_admin')
+ 4 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 7 APPPATH\Controllers\Admin.php(16): view('v_template_admin', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-14 14:32:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/v_dasboard_admin.php"
+[Method: GET, Route: admin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/v_dasboard_admin.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/v_dasboard_admin', [], true)
+ 3 APPPATH\Views\v_template_admin.php(158): view('admin/v_dasboard_admin')
+ 4 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 7 APPPATH\Controllers\Admin.php(16): view('v_template_admin', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-14 14:32:53 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/v_dasboard_admin.php"
+[Method: GET, Route: admin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/v_dasboard_admin.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/v_dasboard_admin', [], true)
+ 3 APPPATH\Views\v_template_admin.php(158): view('admin/v_dasboard_admin')
+ 4 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 7 APPPATH\Controllers\Admin.php(16): view('v_template_admin', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-14 14:32:53 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/v_dasboard_admin.php"
+[Method: GET, Route: admin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/v_dasboard_admin.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/v_dasboard_admin', [], true)
+ 3 APPPATH\Views\v_template_admin.php(158): view('admin/v_dasboard_admin')
+ 4 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 7 APPPATH\Controllers\Admin.php(16): view('v_template_admin', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-14 14:32:53 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/v_dasboard_admin.php"
+[Method: GET, Route: admin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/v_dasboard_admin.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/v_dasboard_admin', [], true)
+ 3 APPPATH\Views\v_template_admin.php(158): view('admin/v_dasboard_admin')
+ 4 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 7 APPPATH\Controllers\Admin.php(16): view('v_template_admin', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-14 14:32:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/v_dasboard_admin.php"
+[Method: GET, Route: admin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/v_dasboard_admin.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/v_dasboard_admin', [], true)
+ 3 APPPATH\Views\v_template_admin.php(158): view('admin/v_dasboard_admin')
+ 4 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 7 APPPATH\Controllers\Admin.php(16): view('v_template_admin', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-14 14:32:59 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/v_dasboard_admin.php"
+[Method: GET, Route: admin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/v_dasboard_admin.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/v_dasboard_admin', [], true)
+ 3 APPPATH\Views\v_template_admin.php(158): view('admin/v_dasboard_admin')
+ 4 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 7 APPPATH\Controllers\Admin.php(16): view('v_template_admin', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-14 14:32:59 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/v_dasboard_admin.php"
+[Method: GET, Route: admin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/v_dasboard_admin.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/v_dasboard_admin', [], true)
+ 3 APPPATH\Views\v_template_admin.php(158): view('admin/v_dasboard_admin')
+ 4 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 7 APPPATH\Controllers\Admin.php(16): view('v_template_admin', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

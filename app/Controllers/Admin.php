@@ -9,10 +9,21 @@ class Admin extends BaseController
 {
     public function index()
     {
-        // $data = [
-        //     'judul' => 'dashboard admin',
-        //     'page' => 'v_template_admin'
-        // ];
-        return view('v_template_admin');
+        $data = [
+            'judul' => 'Dashboard Admin',
+            'menu' => 'dashboard_admin',
+            'page' => 'admin/v_dashboard_admin'
+        ];
+        return view('v_template_admin', $data);
+    }
+
+     public function detail()
+    {
+        $data = [
+            'judul' => 'Detail Admin',
+            'menu' => 'detail',
+            'page' => 'admin/v_detail'
+        ];
+        return view('v_template_admin', $data);
     }
 }
