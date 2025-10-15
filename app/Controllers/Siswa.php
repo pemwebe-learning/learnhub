@@ -5,15 +5,17 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 
-class Guru extends BaseController
+class Siswa extends BaseController
 {
     public function index()
     {
         $data = [
-            'judul' => 'Detail Guru',
-            'menu' => 'detail',
-            'page' => 'dashboard_admin/guru/v_detail'
+        'judul' => 'Siswa',
+        'menu' => 'detail',
+        'page' => 'dashboard_admin/siswa/v_detail',
         ];
+
         return view('v_template_admin', $data);
+
     }
 }

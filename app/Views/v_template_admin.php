@@ -118,7 +118,7 @@
             </a>
           </li>
           <li class="nav-item menu-open">
-            <a href="<?= base_url('admin') ?>" class="nav-link <?= $menu =='dashboard_admin' ? 'active' : '' ?>">
+            <a href="<?= base_url('guru') ?>" class="nav-link <?= $menu =='detail' ? 'active' : '' ?>">
               <i class="fa-solid fa-user-tie"></i>
               <p>
                 Guru
@@ -126,7 +126,7 @@
             </a>
           </li>
           <li class="nav-item menu-open">
-            <a href="<?= base_url('admin') ?>" class="nav-link <?= $menu =='dashboard_admin' ? 'active' : '' ?>">
+            <a href="<?= base_url('siswa') ?>" class="nav-link <?= $menu =='detail' ? 'active' : '' ?>">
               <i class="fa-solid fa-user"></i>
               <p>
                 Siswa
@@ -134,7 +134,7 @@
             </a>
           </li>
           <li class="nav-item menu-open">
-            <a href="<?= base_url('admin') ?>" class="nav-link <?= $menu =='dashboard_admin' ? 'active' : '' ?>">
+            <a href="<?= base_url('kelas') ?>" class="nav-link <?= $menu =='detail' ? 'active' : '' ?>">
               <i class="fa-solid fa-landmark"></i>
               <p>
                 Kelas
@@ -155,7 +155,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard v2</h1>
+            <h1 class="m-0">Dashboard Admin</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
