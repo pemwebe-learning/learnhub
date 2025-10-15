@@ -12,7 +12,7 @@ class Admin extends BaseController
         $data = [
             'judul' => 'Dashboard Admin',
             'menu' => 'dashboard_admin',
-            'page' => 'admin/v_dashboard_admin'
+            'page' => 'dashboard_admin/admin/v_dashboard_admin'
         ];
         return view('v_template_admin', $data);
     }
@@ -22,7 +22,7 @@ class Admin extends BaseController
         $data = [
             'judul' => 'Detail Admin',
             'menu' => 'detail',
-            'page' => 'admin/v_detail'
+            'page' => 'dashboard_admin/admin/v_detail'
         ];
         return view('v_template_admin', $data);
     }
