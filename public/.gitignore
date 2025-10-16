@@ -1,0 +1,9 @@
+# Ignore system folders
+/writable/*
+/vendor/*
+.env
+
+# Allow index.php and AdminLTE folder in public
+!public/index.php
+!public/AdminLTE/
+!public/AdminLTE/**
