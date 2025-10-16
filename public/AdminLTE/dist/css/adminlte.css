@@ -271,8 +271,11 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+  -webkit-appearance: button; /* Untuk Safari / Chrome lama */
+  -moz-appearance: button;    /* Untuk Firefox */
+  appearance: button;         /* Standar modern */
 }
+
 
 button:not(:disabled),
 [type="button"]:not(:disabled),
@@ -330,8 +333,11 @@ progress {
 
 [type="search"] {
   outline-offset: -2px;
-  -webkit-appearance: none;
+  -webkit-appearance: none; /* Safari / Chrome lama */
+  -moz-appearance: none;    /* Firefox */
+  appearance: none;         /* Standar modern */
 }
+
 
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -3817,9 +3823,10 @@ input[type="button"].btn-block {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5rem;
-  -webkit-print-color-adjust: exact;
-  color-adjust: exact;
+  -webkit-print-color-adjust: exact; /* Safari / Chrome lama */
+  print-color-adjust: exact;         /* Standar modern */
 }
+
 
 .custom-control-inline {
   display: -ms-inline-flexbox;
