@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 
-class Guru extends BaseController
+class GuruController extends BaseController
 {
     public function index()
     {
         $data = [
-            'judul' => 'Detail Guru',
-            'menu' => 'detail',
-            'page' => 'dashboard_admin/guru/v_detail'
+            'judul' => 'Guru',
+            'menu' => 'guru',
+            'page' => 'dashboard_admin/guru/v_index'
         ];
         return view('v_template_admin', $data);
     }

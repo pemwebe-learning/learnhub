@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 
-class Admin extends BaseController
+class AdminController extends BaseController
 {
     public function index()
     {
@@ -17,13 +17,4 @@ class Admin extends BaseController
         return view('v_template_admin', $data);
     }
 
-     public function detail()
-    {
-        $data = [
-            'judul' => 'Detail Admin',
-            'menu' => 'detail',
-            'page' => 'dashboard_admin/admin/v_detail'
-        ];
-        return view('v_template_admin', $data);
-    }
 }

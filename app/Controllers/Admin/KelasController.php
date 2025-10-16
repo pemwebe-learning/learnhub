@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 
-class Kelas extends BaseController
+class KelasController extends BaseController
 {
     public function index()
     {
        $data = [
         'judul' => 'Kelas',
-        'menu' => 'detail',
-        'page' => 'dashboard_admin/kelas/v_detail',
+        'menu' => 'kelas',
+        'page' => 'dashboard_admin/kelas/v_index',
         ];
 
         return view('v_template_admin', $data);

@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 
-class Siswa extends BaseController
+class SiswaController extends BaseController
 {
-    public function index()
+     public function index()
     {
         $data = [
         'judul' => 'Siswa',
-        'menu' => 'detail',
-        'page' => 'dashboard_admin/siswa/v_detail',
+        'menu' => 'siswa',
+        'page' => 'dashboard_admin/siswa/v_index',
         ];
 
         return view('v_template_admin', $data);

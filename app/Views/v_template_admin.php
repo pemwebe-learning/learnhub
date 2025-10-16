@@ -20,7 +20,7 @@
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__wobble" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__wobble" src="<?= base_url('AdminLTE') ?>/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
   </div>
 
   <!-- Navbar -->
@@ -102,7 +102,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="<?= base_url('admin') ?>" class="nav-link <?= $menu =='dashboard_admin' ? 'active' : '' ?>">
+            <a href="<?= base_url('admin/') ?>" class="nav-link <?= $menu =='dashboard_admin' ? 'active' : '' ?>">
               <i class="fa-solid fa-grip"></i>
               <p>
                 Dashboard
@@ -110,7 +110,7 @@
             </a>
           </li>
           <li class="nav-item menu-open">
-            <a href="<?= base_url('admin/detail') ?>" class="nav-link <?= $menu =='detail' ? 'active' : '' ?>">
+            <a href="<?= base_url('admin/user') ?>" class="nav-link <?= $menu =='user' ? 'active' : '' ?>">
               <i class="fa-solid fa-user-gear"> </i>
               <p>
                 Admin
@@ -118,7 +118,7 @@
             </a>
           </li>
           <li class="nav-item menu-open">
-            <a href="<?= base_url('guru') ?>" class="nav-link <?= $menu =='detail' ? 'active' : '' ?>">
+            <a href="<?= base_url('admin/guru') ?>" class="nav-link <?= $menu =='guru' ? 'active' : '' ?>">
               <i class="fa-solid fa-user-tie"></i>
               <p>
                 Guru
@@ -126,7 +126,7 @@
             </a>
           </li>
           <li class="nav-item menu-open">
-            <a href="<?= base_url('siswa') ?>" class="nav-link <?= $menu =='detail' ? 'active' : '' ?>">
+            <a href="<?= base_url('admin/siswa') ?>" class="nav-link <?= $menu =='siswa' ? 'active' : '' ?>">
               <i class="fa-solid fa-user"></i>
               <p>
                 Siswa
@@ -134,7 +134,7 @@
             </a>
           </li>
           <li class="nav-item menu-open">
-            <a href="<?= base_url('kelas') ?>" class="nav-link <?= $menu =='detail' ? 'active' : '' ?>">
+            <a href="<?= base_url('admin/kelas') ?>" class="nav-link <?= $menu =='kelas' ? 'active' : '' ?>">
               <i class="fa-solid fa-landmark"></i>
               <p>
                 Kelas
