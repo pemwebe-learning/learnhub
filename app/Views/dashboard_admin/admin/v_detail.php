@@ -11,9 +11,9 @@
             <thead>
               <tr>
                 <th style="width: 10px">#</th>
-                <th>Task</th>
-                <th>Progress</th>
-                <th style="width: 40px">Label</th>
+                <th>Nama</th>
+                <th>Email</th>
+                <th style="width: 40px">Password</th>
               </tr>
             </thead>
             <tbody>
