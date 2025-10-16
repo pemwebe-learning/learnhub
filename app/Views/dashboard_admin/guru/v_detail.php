@@ -1,68 +1,94 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-12"> <!-- gunakan col-12 agar tabel memenuhi seluruh lebar -->
+    <div class="col-12">
       <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Bordered Table</h3>
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="card-title mb-0">Data Guru</h3>
         </div>
-        <!-- /.card-header -->
+
         <div class="card-body p-0">
-          <table class="table table-bordered table-hover mb-0">
-            <thead>
+          <table class="table table-bordered table-hover mb-0 text-center align-middle">
+            <thead class="table-dark">
               <tr>
-                <th style="width: 10px">#</th>
-                <th>Task</th>
-                <th>Progress</th>
-                <th style="width: 40px">Label</th>
+                <th style="width: 50px">No</th>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Foto</th>
+                <th style="width: 120px">Aksi</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>1.</td>
-                <td>Upload Materi Pembelajaran</td>
+                <td>1</td>
+                <td>iyan mariyan</td>
+                <td>iyan@guru.com</td>
+                <td>********</td>
                 <td>
-                  <div class="progress progress-xs">
-                    <div class="progress-bar bg-primary" style="width: 55%"></div>
+                  <img src="https://via.placeholder.com/50" alt="Foto Guru" class="img-circle elevation-2" width="50" height="50">
+                </td>
+                <td class="text-center align-middle">
+                  <div class="btn-group" role="group">
+                    <a href="#" class="btn btn-success btn-sm" title="Lihat">
+                      <i class="fas fa-eye"></i>
+                    </a>
+                    <a href="#" class="btn btn-warning btn-sm" title="Edit">
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="#" class="btn btn-danger btn-sm" title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini?');">
+                      <i class="fas fa-trash"></i>
+                    </a>
                   </div>
                 </td>
-                <td><span class="badge bg-danger">55%</span></td>
               </tr>
               <tr>
-                <td>2.</td>
-                <td>Membuat Renccana Pembelajaran (RPP)</td>
+                <td>2</td>
+                <td>Maria Santos</td>
+                <td>maria@guru.com</td>
+                <td>********</td>
                 <td>
-                  <div class="progress progress-xs">
-                    <div class="progress-bar bg-warning" style="width: 70%"></div>
+                  <img src="https://via.placeholder.com/50" alt="Foto Guru" class="img-circle elevation-2" width="50" height="50">
+                </td>
+                <td class="text-center align-middle">
+                  <div class="btn-group" role="group">
+                    <a href="#" class="btn btn-success btn-sm" title="Lihat">
+                      <i class="fas fa-eye"></i>
+                    </a>
+                    <a href="#" class="btn btn-warning btn-sm" title="Edit">
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="#" class="btn btn-danger btn-sm" title="Hapus">
+                      <i class="fas fa-trash"></i>
+                    </a>
                   </div>
                 </td>
-                <td><span class="badge bg-warning">70%</span></td>
               </tr>
               <tr>
-                <td>3.</td>
-                <td>Input Nilai Ke Sistem</td>
+                <td>3</td>
+                <td>Andi Rahman</td>
+                <td>andi@guru.com</td>
+                <td>********</td>
                 <td>
-                  <div class="progress progress-xs progress-striped active">
-                    <div class="progress-bar bg-primary" style="width: 30%"></div>
+                  <img src="https://via.placeholder.com/50" alt="Foto Guru" class="img-circle elevation-2" width="50" height="50">
+                </td>
+                <td class="text-center align-middle">
+                  <div class="btn-group" role="group">
+                    <a href="#" class="btn btn-success btn-sm" title="Lihat">
+                      <i class="fas fa-eye"></i>
+                    </a>
+                    <a href="#" class="btn btn-warning btn-sm" title="Edit">
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="#" class="btn btn-danger btn-sm" title="Hapus">
+                      <i class="fas fa-trash"></i>
+                    </a>
                   </div>
                 </td>
-                <td><span class="badge bg-info">30%</span></td>
-              </tr>
-              <tr>
-                <td>4.</td>
-                <td>Mengoreksi Tugas Siswa</td>
-                <td>
-                  <div class="progress progress-xs progress-striped active">
-                    <div class="progress-bar bg-success" style="width: 90%"></div>
-                  </div>
-                </td>
-                <td><span class="badge bg-success">90%</span></td>
               </tr>
             </tbody>
           </table>
         </div>
-        <!-- /.card-body -->
       </div>
-      <!-- /.card -->
     </div>
   </div>
 </div>
