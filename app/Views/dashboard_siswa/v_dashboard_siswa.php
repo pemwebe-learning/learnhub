@@ -1,63 +1,60 @@
-<div class="row">
-  <!-- Box 1: Jumlah Tugas -->
-  <div class="col-12 col-sm-6 col-md-3">
-    <div class="info-box">
-      <span class="info-box-icon bg-info elevation-1">
-        <i class="fa-solid fa-book-open"></i>
-      </span>
 
-      <div class="info-box-content">
-        <span class="info-box-text">Tugas Aktif</span>
-        <span class="info-box-number">
-          5
-          <small>tugas</small>
-        </span>
-      </div>
-    </div>
-  </div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+              <span class="info-box-icon bg-info elevation-1"><i class="fa-solid fa-user-tie"></i></span>
 
-  <!-- Box 2: Nilai Rata-rata -->
-  <div class="col-12 col-sm-6 col-md-3">
-    <div class="info-box mb-3">
-      <span class="info-box-icon bg-success elevation-1">
-        <i class="fa-solid fa-chart-line"></i>
-      </span>
+              <div class="info-box-content">
+                <span class="info-box-text">Guru</span>
+                <span class="info-box-number">
+                  10
+                  <small>%</small>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-danger elevation-1"><i class="fa-solid fa-user-gear"> </i></span>
 
-      <div class="info-box-content">
-        <span class="info-box-text">Nilai Rata-rata</span>
-        <span class="info-box-number">87.5</span>
-      </div>
-    </div>
-  </div>
+              <div class="info-box-content">
+                <span class="info-box-text">Admin</span>
+                <span class="info-box-number">41,410</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
 
-  <!-- fix for small devices only -->
-  <div class="clearfix hidden-md-up"></div>
+          <!-- fix for small devices only -->
+          <div class="clearfix hidden-md-up"></div>
 
-  <!-- Box 3: Kehadiran -->
-  <div class="col-12 col-sm-6 col-md-3">
-    <div class="info-box mb-3">
-      <span class="info-box-icon bg-warning elevation-1">
-        <i class="fa-solid fa-user-check"></i>
-      </span>
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-success elevation-1"><i class="fa-solid fa-user"> </i></span>
 
-      <div class="info-box-content">
-        <span class="info-box-text">Kehadiran</span>
-        <span class="info-box-number">95%</span>
-      </div>
-    </div>
-  </div>
+              <div class="info-box-content">
+                <span class="info-box-text">Siswa</span>
+                <span class="info-box-number">760</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-warning elevation-1"><i class="fa-solid fa-landmark"></i></span>
 
-  <!-- Box 4: Pengumuman -->
-  <div class="col-12 col-sm-6 col-md-3">
-    <div class="info-box mb-3">
-      <span class="info-box-icon bg-danger elevation-1">
-        <i class="fa-solid fa-bullhorn"></i>
-      </span>
-
-      <div class="info-box-content">
-        <span class="info-box-text">Pengumuman Baru</span>
-        <span class="info-box-number">3</span>
-      </div>
-    </div>
-  </div>
-</div>
+              <div class="info-box-content">
+                <span class="info-box-text">Jumlah Kelas</span>
+                <span class="info-box-number">2,000</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->

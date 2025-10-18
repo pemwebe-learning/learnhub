@@ -56,3 +56,20 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->get('siswa', 'SiswaController::index');
 });
 
+$routes->group('siswa', ['namespace' => 'App\Controllers\Siswa'], function ($routes) {
+    // Dashboard
+    $routes->get('/', 'SiswaController::index');
+
+    //materi
+    $routes->get('materi', 'MateriController::index');
+
+    //Tugas
+    $routes->get('tugas', 'TugasController::index');
+
+    //Nilai
+    $routes->get('nilai', 'NilaiController::index');
+
+    //Pengumuman
+    $routes->get('pengumuman', 'PengumumanController::index');
+});
+
