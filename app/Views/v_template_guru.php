@@ -102,7 +102,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="<?= base_url('admin/') ?>" class="nav-link <?= $menu =='dashboard_admin' ? 'active' : '' ?>">
+            <a href="<?= base_url('guru/') ?>" class="nav-link <?= $menu =='dashboard_guru' ? 'active' : '' ?>">
               <i class="fa-solid fa-grip"></i>
               <p>
                 Dashboard
@@ -110,7 +110,7 @@
             </a>
           </li>
           <li class="nav-item menu-open">
-            <a href="<?= base_url('siswa/materi') ?>" class="nav-link <?= $menu =='materi' ? 'active' : '' ?>">
+            <a href="<?= base_url('guru/materi') ?>" class="nav-link <?= $menu =='materi' ? 'active' : '' ?>">
               <i class="fa-solid fa-user-gear"> </i>
               <p>
                 Materi
@@ -118,7 +118,7 @@
             </a>
           </li>
           <li class="nav-item menu-open">
-            <a href="<?= base_url('siswa/tugas') ?>" class="nav-link <?= $menu =='tugas' ? 'active' : '' ?>">
+            <a href="<?= base_url('guru/tugas') ?>" class="nav-link <?= $menu =='tugas' ? 'active' : '' ?>">
               <i class="fa-solid fa-user-tie"></i>
               <p>
                 Tugas
@@ -126,7 +126,7 @@
             </a>
           </li>
           <li class="nav-item menu-open">
-            <a href="<?= base_url('siswa/nilai') ?>" class="nav-link <?= $menu =='nilai' ? 'active' : '' ?>">
+            <a href="<?= base_url('guru/nilai') ?>" class="nav-link <?= $menu =='nilai' ? 'active' : '' ?>">
               <i class="fa-solid fa-user"></i>
               <p>
                 Nilai
@@ -134,13 +134,29 @@
             </a>
           </li>
           <li class="nav-item menu-open">
-            <a href="<?= base_url('siswa/pengumuman') ?>" class="nav-link <?= $menu =='pengumuman' ? 'active' : '' ?>">
+            <a href="<?= base_url('guru/pengumuman') ?>" class="nav-link <?= $menu =='pengumuman' ? 'active' : '' ?>">
               <i class="fa-solid fa-landmark"></i>
               <p>
                 Pengumuman
               </p>
             </a>
-          </li>                           
+          </li>
+          <li class="nav-item menu-open">
+            <a href="<?= base_url('guru/siswa') ?>" class="nav-link <?= $menu =='siswa' ? 'active' : '' ?>">
+              <i class="fa-solid fa-landmark"></i>
+              <p>
+                Siswa
+              </p>
+            </a>
+          </li> 
+          <li class="nav-item menu-open">
+            <a href="<?= base_url('guru/mapel') ?>" class="nav-link <?= $menu =='mapel' ? 'active' : '' ?>">
+              <i class="fa-solid fa-landmark"></i>
+              <p>
+                Mapel
+              </p>
+            </a>
+          </li>                          
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

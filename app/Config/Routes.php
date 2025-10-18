@@ -7,7 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 
-
+// ROUTING ADMIN
 $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
 
     // Dashboard
@@ -56,6 +56,8 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->get('siswa', 'SiswaController::index');
 });
 
+
+//ROUTING SISWA
 $routes->group('siswa', ['namespace' => 'App\Controllers\Siswa'], function ($routes) {
     // Dashboard
     $routes->get('/', 'SiswaController::index');
@@ -71,5 +73,35 @@ $routes->group('siswa', ['namespace' => 'App\Controllers\Siswa'], function ($rou
 
     //Pengumuman
     $routes->get('pengumuman', 'PengumumanController::index');
+});
+
+
+
+//ROUTING GURU
+$routes->group('guru', ['namespace' => 'App\Controllers\Guru'], function ($routes) {
+    // Dashboard
+    $routes->get('/', 'GuruController::index');
+
+    //kelas
+    $routes->get('kelas', 'KelasController::index');
+
+    //mapel
+    $routes->get('mapel', 'MapelController::index');
+
+    //materi
+    $routes->get('materi', 'MateriController::index');
+
+    //pengumuman
+    $routes->get('pengumuman', 'PengumumanController::index');
+
+    //siswa
+    $routes->get('siswa', 'SiswaController::index');
+
+    //tugas
+    $routes->get('tugas', 'TugasController::index');
+
+    //nilai
+    $routes->get('nilai', 'NilaiController::index');
+
 });
 

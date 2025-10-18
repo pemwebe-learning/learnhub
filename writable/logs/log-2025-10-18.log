@@ -34,3 +34,35 @@ in APPPATH\Config\Routes.php on line 65.
  4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-18 16:42:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard_guru/mape;/v_index.php"
+[Method: GET, Route: guru/mapel]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard_guru/mape;/v_index.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_guru/mape;/v_index', [], true)
+ 3 APPPATH\Views\v_template_guru.php(195): view('dashboard_guru/mape;/v_index')
+ 4 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_guru.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_guru', [], true)
+ 7 APPPATH\Controllers\Guru\MapelController.php(17): view('v_template_guru', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\MapelController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\MapelController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-18 16:42:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard_guru/mape;/v_index.php"
+[Method: GET, Route: guru/mapel]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard_guru/mape;/v_index.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_guru/mape;/v_index', [], true)
+ 3 APPPATH\Views\v_template_guru.php(195): view('dashboard_guru/mape;/v_index')
+ 4 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_guru.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_guru', [], true)
+ 7 APPPATH\Controllers\Guru\MapelController.php(17): view('v_template_guru', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\MapelController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\MapelController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
