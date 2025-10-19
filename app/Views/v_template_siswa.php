@@ -111,7 +111,7 @@
           </li>
           <li class="nav-item menu-open">
             <a href="<?= base_url('siswa/materi') ?>" class="nav-link <?= $menu =='materi' ? 'active' : '' ?>">
-              <i class="fa-solid fa-user-gear"> </i>
+              <i class="fa-solid fa-book"></i>
               <p>
                 Materi
               </p>
@@ -119,7 +119,7 @@
           </li>
           <li class="nav-item menu-open">
             <a href="<?= base_url('siswa/tugas') ?>" class="nav-link <?= $menu =='tugas' ? 'active' : '' ?>">
-              <i class="fa-solid fa-user-tie"></i>
+              <i class="fa-solid fa-list-check"></i>
               <p>
                 Tugas
               </p>
@@ -127,7 +127,7 @@
           </li>
           <li class="nav-item menu-open">
             <a href="<?= base_url('siswa/nilai') ?>" class="nav-link <?= $menu =='nilai' ? 'active' : '' ?>">
-              <i class="fa-solid fa-user"></i>
+              <i class="fa-solid fa-check"></i>
               <p>
                 Nilai
               </p>
@@ -135,7 +135,7 @@
           </li>
           <li class="nav-item menu-open">
             <a href="<?= base_url('siswa/pengumuman') ?>" class="nav-link <?= $menu =='pengumuman' ? 'active' : '' ?>">
-              <i class="fa-solid fa-landmark"></i>
+              <i class="fa-solid fa-bullhorn"></i>
               <p>
                 Pengumuman
               </p>

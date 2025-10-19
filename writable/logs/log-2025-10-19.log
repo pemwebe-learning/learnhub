@@ -1,0 +1,34 @@
+CRITICAL - 2025-10-19 14:14:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/template_siswa.php"
+[Method: GET, Route: siswa/materi]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/template_siswa.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout/template_siswa', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_siswa/materi/v_index', [], true)
+ 4 APPPATH\Views\v_template_siswa.php(179): view('dashboard_siswa/materi/v_index')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\learnhub\\app\\Views\\v_template_siswa.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_siswa', [], true)
+ 8 APPPATH\Controllers\Siswa\MateriController.php(18): view('v_template_siswa', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa\MateriController->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa\MateriController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-19 14:14:41 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/template_siswa.php"
+[Method: GET, Route: siswa/materi]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/template_siswa.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout/template_siswa', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_siswa/materi/v_index', [], true)
+ 4 APPPATH\Views\v_template_siswa.php(179): view('dashboard_siswa/materi/v_index')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\learnhub\\app\\Views\\v_template_siswa.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_siswa', [], true)
+ 8 APPPATH\Controllers\Siswa\MateriController.php(18): view('v_template_siswa', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa\MateriController->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa\MateriController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
