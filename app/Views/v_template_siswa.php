@@ -103,7 +103,7 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
             <a href="<?= base_url('admin/') ?>" class="nav-link <?= $menu =='dashboard_admin' ? 'active' : '' ?>">
-              <i class="fa-solid fa-grip"></i>
+              <i class="fa-solid fa-gauge"></i>
               <p>
                 Dashboard
               </p>
