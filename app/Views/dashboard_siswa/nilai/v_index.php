@@ -1,3 +1,6 @@
+<div class="container-fluid">
+<div class="row">
+<div class="col-12">
 <div class="card">
   <div class="card-header bg-success text-white">
     <h3 class="card-title">Nilai Siswa</h3>
@@ -28,4 +31,7 @@
       </tbody>
     </table>
   </div>
+</div>
+</div>
+</div>
 </div>

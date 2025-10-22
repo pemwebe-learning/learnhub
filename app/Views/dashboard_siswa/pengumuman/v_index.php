@@ -1,3 +1,6 @@
+<div class="container-fluid">
+<div class="row">
+<div class="col-12">
 <div class="card">
   <div class="card-header bg-danger text-white">
     <h3 class="card-title">Pengumuman Sekolah</h3>
@@ -9,4 +12,7 @@
       <li>📅 Pengumpulan tugas minggu ini maksimal hari Jumat</li>
     </ul>
   </div>
+</div>
+</div>
+</div>
 </div>

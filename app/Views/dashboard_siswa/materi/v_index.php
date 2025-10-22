@@ -1,3 +1,6 @@
+<div class="container-fluid">
+<div class="row">
+<div class="col-12">
 <div class="card">
   <div class="card-header bg-warning text-white">
     <h3 class="card-title">Materi Pelajaran</h3>
@@ -40,4 +43,7 @@
       </tbody>
     </table>
   </div>
+</div>
+</div>
+</div>
 </div>
