@@ -5,7 +5,7 @@
         <div class="card-header d-flex justify-content-between align-items-center">
           <h3 class="card-title mb-0">Data Admin</h3>
         <div class="card-tools">
-        <a href="<?= base_url('User/Input') ?>" class="btn btn-flat btn-primary btn-sm">
+        <a href="<?= base_url('admin/user/input') ?>" class="btn btn-flat btn-primary btn-sm">
         <i class="fas fa-plus"></i> Tambah
         </a>
         </div>

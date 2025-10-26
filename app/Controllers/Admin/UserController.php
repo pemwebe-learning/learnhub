@@ -25,12 +25,12 @@ class UserController extends BaseController
         return view('v_template_admin', $data);
     }
 
-    public function Input () {
+    public function input () {
         $data = [
             'judul' => 'Input Admin',
             'menu' => 'input_admin',
             'page' => 'dashboard_admin/user/v_input',
-            'admin' => $this->ModelAdmin->findAll(),
+            'admins' => $this->ModelAdmin->findAll(),
         ];
         return view('v_template_admin' ,$data);
     }

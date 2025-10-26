@@ -15,7 +15,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
 
     // 👥 User Management
     $routes->get('user', 'UserController::index');
-    // $routes->get('users/create', 'UserController::create');
+    $routes->get('user/input/', 'UserController::input');
     // $routes->post('users/store', 'UserController::store');
     // $routes->get('users/edit/(:num)', 'UserController::edit/$1');
     // $routes->post('users/update/(:num)', 'UserController::update/$1');
@@ -51,6 +51,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
 
     //guru
     $routes->get('guru', 'GuruController::index');
+    $routes->get('guru/input', 'GuruController::input');
 
     //siswa
     $routes->get('siswa', 'SiswaController::index');
