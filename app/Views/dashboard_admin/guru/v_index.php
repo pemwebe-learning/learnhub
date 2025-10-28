@@ -21,7 +21,7 @@
                 <th>Email</th>
                 <th>No HP</th>
                 <th>Jenis Kelamin</th>
-                <th style="width: 120px">Aksi</th>
+                <th style="width: 150px">Aksi</th>
               </tr>
             </thead>
         <tbody>
@@ -41,9 +41,14 @@
                     <td><?= esc($a['no_hp']) ?></td>
                     <td><?= esc($a['jenis_kelamin']) ?></td>
                     <td>
-                        <a href="<?= base_url('admin/edit/' . $a['id_guru']) ?>" class="btn btn-warning btn-sm">Edit</a>
-                        <a href="<?= base_url('admin/delete/' . $a['id_guru']) ?>" class="btn btn-danger btn-sm"
-                           onclick="return confirm('Yakin ingin menghapus data ini?')">Hapus</a>
+                        <a href="#" class="btn btn-success btn-sm" title="Lihat">
+                      <i class="fas fa-eye"></i>
+                    </a>
+                    <a href="#" class="btn btn-warning btn-sm" title="Edit">
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="#" class="btn btn-danger btn-sm" title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini?');">
+                      <i class="fas fa-trash"></i>
                     </td>
                 </tr>
             <?php endforeach; ?>
