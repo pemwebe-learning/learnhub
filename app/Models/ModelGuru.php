@@ -39,7 +39,7 @@ class ModelGuru extends Model
     // Validation
     protected $validationRules      = [
         'nama_guru'    => 'required|min_length[3]|max_length[100]',
-        'email'         => 'required|valid_email|is_unique[tb_admin.email]',
+        'email'         => 'required|valid_email|is_unique[tb_guru.email]',
         'password'      => 'required|min_length[6]|max_length[50]',
         'alamat'        => 'permit_empty|max_length[255]',
         'no_hp'         => 'required|numeric|min_length[10]|max_length[15]',
@@ -47,7 +47,7 @@ class ModelGuru extends Model
         'foto'          => 'permit_empty|is_image[foto]|mime_in[foto,image/jpg,image/jpeg,image/png]|max_size[foto,2048]'
     ];
    protected $validationMessages = [
-        'nama_admin' => [
+        'nama_guru' => [
             'required'   => 'Nama admin wajib diisi.',
             'min_length' => 'Nama admin minimal 3 karakter.',
             'max_length' => 'Nama admin maksimal 100 karakter.',

@@ -16,11 +16,11 @@
             <thead class="table-dark">
               <tr>
                 <th style="width: 50px">No</th>
-                <th>Foto</th>
-                <th>Nama</th>
-                <th>Email</th>
+                <th style="width: 300px;">Nama</th>
+                <th style="width: 300px;">Email</th>
                 <th>No HP</th>
-                <th>Jenis Kelamin</th>
+                <th>jenis kelamin</th>
+                <th>foto</th>
                 <th style="width: 150px">Aksi</th>
               </tr>
             </thead>
@@ -29,6 +29,11 @@
             <?php foreach ($guru as $i => $a): ?>
                 <tr>
                     <td><?= $i + 1 ?></td>
+                    
+                    <td><?= esc($a['nama_guru']) ?></td>
+                    <td><?= esc($a['email']) ?></td>
+                    <td><?= esc($a['no_hp']) ?></td>
+                    <td><?= esc($a['jenis_kelamin']) ?></td>
                     <td>
                         <?php if ($a['foto']): ?>
                             <img src="<?= base_url('guru/' . $a['foto']) ?>" alt="Foto" width="50" height="50" class="rounded-circle">
@@ -36,10 +41,6 @@
                             <span class="text-muted">Tidak ada</span>
                         <?php endif; ?>
                     </td>
-                    <td><?= esc($a['nama_guru']) ?></td>
-                    <td><?= esc($a['email']) ?></td>
-                    <td><?= esc($a['no_hp']) ?></td>
-                    <td><?= esc($a['jenis_kelamin']) ?></td>
                     <td>
                         <a href="#" class="btn btn-success btn-sm" title="Lihat">
                       <i class="fas fa-eye"></i>

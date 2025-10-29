@@ -10,50 +10,58 @@
               session();
               $validation = \Config\Services::validation();
               ?>
-              <?php echo form_open_multipart('Rumah/InsertData') ?>
+              <?php echo form_open_multipart('admin/guru/insertdata') ?>
 
                <div class="row">
                   <div class="col-sm-3">
                   <div class="form-group">
-                    <label>Nama Rumah</label>
-                    <input name="rumah" value="<?= old('rumah') ?>" placeholder="Nama Rumah" class="form-control">
-                    <p class="text-danger"><?= $validation->hasError('rumah') ? $validation->getError('rumah') : '' ?></p>
+                    <label>Email</label>
+                    <input name="email" value="<?= old('email') ?>" placeholder="Email" class="form-control">
+                    <p class="text-danger"><?= $validation->hasError('email') ? $validation->getError('email') : '' ?></p>
+                  </div>
+                  </div>
+                  <div class="col-sm-3">
+                  <div class="form-group">
+                    <label>password</label>
+                    <input name="password" value="<?= old('password') ?>" placeholder="password" class="form-control">
+                    <p class="text-danger"><?= $validation->hasError('password') ? $validation->getError('password') : '' ?></p>
+                  </div>                        
+                  </div>
+                  <div class="col-sm-3">
+                  <div class="form-group">
+                    <label>Nama guru</label>
+                    <input name="nama_guru" value="<?= old('nama_guru') ?>" placeholder="Nama Guru" class="form-control">
+                    <p class="text-danger"><?= $validation->hasError('nama_guru') ? $validation->getError('nama_guru') : '' ?></p>
+                  </div>                        
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-3">
+                  <div class="form-group">
+                    <label>alamat</label>
+                    <input name="alamat" value="<?= old('alamat') ?>" placeholder="alamat" class="form-control">
+                    <p class="text-danger"><?= $validation->hasError('alamat') ? $validation->getError('alamat') : '' ?></p>
                   </div>
                   </div>
 
                   <div class="col-sm-3">
                   <div class="form-group">
-                    <label>NIK</label>
-                    <input name="nik" value="<?= old('nik') ?>" placeholder="NIK" class="form-control">
-                    <p class="text-danger"><?= $validation->hasError('nik') ? $validation->getError('nik') : '' ?></p>
+                    <label>jenis kelamin</label>
+                    <input name="jenis_kelamin" value="<?= old('jenis_kelamin') ?>" placeholder="jenis_kelamin" class="form-control">
+                    <p class="text-danger"><?= $validation->hasError('jenis_kelamin') ? $validation->getError('jenis_kelamin') : '' ?></p>
                   </div>                        
                   </div>
 
                   <div class="col-sm-3">
                   <div class="form-group">
-                    <label>Mata Pencaharian</label>
-                    <input name="mata_pencaharian" value="<?= old('mata_pencaharian') ?>" placeholder="Mata Pencaharian" class="form-control">
-                    <p class="text-danger"><?= $validation->hasError('mata_pencaharian') ? $validation->getError('mata_pencaharian') : '' ?></p>
+                    <label>no hp</label>
+                    <input name="no_hp" value="<?= old('no_hp') ?>" placeholder="no_hp" class="form-control">
+                    <p class="text-danger"><?= $validation->hasError('no_hp') ? $validation->getError('no_hp') : '' ?></p>
                   </div>                        
                   </div>
-
-                  <div class="col-sm-3">
-                  <div class="form-group">
-                    <label>Keterangan</label>
-                    <select name="id_keterangan" class="form-control">
-                    <option value="">--Pilih Keterangan--</option>
-                    <?php foreach ($keterangan as $key => $value) { ?>
-                    <option value="<?= $value['id_keterangan'] ?>" <?= old('id_keterangan') == $value['id_keterangan'] ? 'selected' : '' ?>>
-                    <?= $value['keterangan'] ?>
-                    </option>
-                    <?php } ?>
-                    </select>
-                    <p class="text-danger"><?= $validation->hasError('id_keterangan') ? $validation->getError('id_keterangan') : '' ?></p>
-                  </div>                        
-                  </div>
-                </div>           
+                </div>             
             <button class="btn btn-primary btn-flat" type="submit">Simpan</button>
-            <a href="<?= base_url('Rumah') ?>"class="btn btn-success btn-flat">Kembali</a>
+            <a href="<?= base_url('admin/guru') ?>"class="btn btn-success btn-flat">Kembali</a>
 
               <?php echo form_close() ?>
 

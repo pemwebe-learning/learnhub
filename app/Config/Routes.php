@@ -52,6 +52,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     //guru
     $routes->get('guru', 'GuruController::index');
     $routes->get('guru/input', 'GuruController::input');
+    $routes->post('guru/insertdata', 'GuruController::InsertData');
 
     //siswa
     $routes->get('siswa', 'SiswaController::index');
