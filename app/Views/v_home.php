@@ -39,9 +39,9 @@
     </p>
 
     <div class="button-group">
-      <button class="btn">Login Guru</button>
-      <button class="btn">Login Siswa</button>
-      <button class="btn">Login Admin</button>
+      <a class="btn" href="<?= base_url('guru/dashboard')?>">Login Guru</a>
+      <a href="<?= base_url('siswa/dashboard') ?>" class="btn">Login Siswa</a>
+      <a href="<?= base_url('admin/dashboard') ?>" class="btn">Login Admin</a>
     </div>
   </main>
 

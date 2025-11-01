@@ -11,7 +11,7 @@ $routes->get('/', 'Home::index');
 $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
 
     // Dashboard
-    $routes->get('/', 'AdminController::index');
+    $routes->get('dashboard', 'AdminController::index');
 
     // 👥 User Management
     $routes->get('user', 'UserController::index');
@@ -62,7 +62,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
 //ROUTING SISWA
 $routes->group('siswa', ['namespace' => 'App\Controllers\Siswa'], function ($routes) {
     // Dashboard
-    $routes->get('/', 'SiswaController::index');
+    $routes->get('dashboard', 'SiswaController::index');
 
     //materi
     $routes->get('materi', 'MateriController::index');
@@ -82,7 +82,7 @@ $routes->group('siswa', ['namespace' => 'App\Controllers\Siswa'], function ($rou
 //ROUTING GURU
 $routes->group('guru', ['namespace' => 'App\Controllers\Guru'], function ($routes) {
     // Dashboard
-    $routes->get('/', 'GuruController::index');
+    $routes->get('dashboard', 'GuruController::index');
 
     //kelas
     $routes->get('kelas', 'KelasController::index');
