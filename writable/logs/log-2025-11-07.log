@@ -1,0 +1,250 @@
+ERROR - 2025-11-07 07:05:40 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db-learhub' in C:\laragon\www\learnhub\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\learnhub\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db-learhub', 3306, '', 0)
+#1 C:\laragon\www\learnhub\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\learnhub\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\learnhub\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\learnhub\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\learnhub\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\learnhub\app\Controllers\LoginAdmin.php(41): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\learnhub\system\CodeIgniter.php(933): App\Controllers\LoginAdmin->prosesLoginAdmin()
+#8 C:\laragon\www\learnhub\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginAdmin))
+#9 C:\laragon\www\learnhub\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\learnhub\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\learnhub\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\learnhub\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db-learhub' in C:\laragon\www\learnhub\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\learnhub\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\learnhub\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\learnhub\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\learnhub\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\learnhub\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\learnhub\app\Controllers\LoginAdmin.php(41): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\learnhub\system\CodeIgniter.php(933): App\Controllers\LoginAdmin->prosesLoginAdmin()
+#7 C:\laragon\www\learnhub\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginAdmin))
+#8 C:\laragon\www\learnhub\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\learnhub\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\learnhub\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\learnhub\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-11-07 07:05:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db-learhub'
+[Method: POST, Route: proses_login_admin]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_admin`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\LoginAdmin.php(41): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginAdmin->prosesLoginAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginAdmin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-07 07:09:22 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db-learhub' in C:\laragon\www\learnhub\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\learnhub\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db-learhub', 3306, '', 0)
+#1 C:\laragon\www\learnhub\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\learnhub\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\learnhub\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\learnhub\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\learnhub\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\learnhub\app\Controllers\LoginAdmin.php(41): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\learnhub\system\CodeIgniter.php(933): App\Controllers\LoginAdmin->prosesLoginAdmin()
+#8 C:\laragon\www\learnhub\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginAdmin))
+#9 C:\laragon\www\learnhub\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\learnhub\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\learnhub\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\learnhub\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db-learhub' in C:\laragon\www\learnhub\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\learnhub\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\learnhub\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\learnhub\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\learnhub\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\learnhub\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\learnhub\app\Controllers\LoginAdmin.php(41): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\learnhub\system\CodeIgniter.php(933): App\Controllers\LoginAdmin->prosesLoginAdmin()
+#7 C:\laragon\www\learnhub\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginAdmin))
+#8 C:\laragon\www\learnhub\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\learnhub\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\learnhub\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\learnhub\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-11-07 07:09:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db-learhub'
+[Method: POST, Route: proses_login_admin]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_admin`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\LoginAdmin.php(41): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginAdmin->prosesLoginAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginAdmin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-07 07:09:25 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db-learhub' in C:\laragon\www\learnhub\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\learnhub\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db-learhub', 3306, '', 0)
+#1 C:\laragon\www\learnhub\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\learnhub\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\learnhub\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\learnhub\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\learnhub\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\learnhub\app\Controllers\LoginAdmin.php(41): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\learnhub\system\CodeIgniter.php(933): App\Controllers\LoginAdmin->prosesLoginAdmin()
+#8 C:\laragon\www\learnhub\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginAdmin))
+#9 C:\laragon\www\learnhub\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\learnhub\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\learnhub\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\learnhub\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db-learhub' in C:\laragon\www\learnhub\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\learnhub\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\learnhub\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\learnhub\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\learnhub\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\learnhub\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\learnhub\app\Controllers\LoginAdmin.php(41): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\learnhub\system\CodeIgniter.php(933): App\Controllers\LoginAdmin->prosesLoginAdmin()
+#7 C:\laragon\www\learnhub\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginAdmin))
+#8 C:\laragon\www\learnhub\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\learnhub\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\learnhub\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\learnhub\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-11-07 07:09:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db-learhub'
+[Method: POST, Route: proses_login_admin]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_admin`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\LoginAdmin.php(41): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginAdmin->prosesLoginAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginAdmin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-07 07:09:28 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db-learhub' in C:\laragon\www\learnhub\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\learnhub\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db-learhub', 3306, '', 0)
+#1 C:\laragon\www\learnhub\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\learnhub\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\learnhub\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\learnhub\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\learnhub\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\learnhub\app\Controllers\LoginAdmin.php(41): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\learnhub\system\CodeIgniter.php(933): App\Controllers\LoginAdmin->prosesLoginAdmin()
+#8 C:\laragon\www\learnhub\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginAdmin))
+#9 C:\laragon\www\learnhub\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\learnhub\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\learnhub\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\learnhub\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db-learhub' in C:\laragon\www\learnhub\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\learnhub\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\learnhub\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\learnhub\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\learnhub\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\learnhub\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\learnhub\app\Controllers\LoginAdmin.php(41): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\learnhub\system\CodeIgniter.php(933): App\Controllers\LoginAdmin->prosesLoginAdmin()
+#7 C:\laragon\www\learnhub\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginAdmin))
+#8 C:\laragon\www\learnhub\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\learnhub\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\learnhub\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\learnhub\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-11-07 07:09:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db-learhub'
+[Method: POST, Route: proses_login_admin]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_admin`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\LoginAdmin.php(41): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginAdmin->prosesLoginAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginAdmin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-07 07:10:31 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db-learhub' in C:\laragon\www\learnhub\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\learnhub\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db-learhub', 3306, '', 0)
+#1 C:\laragon\www\learnhub\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\learnhub\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\learnhub\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\learnhub\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\learnhub\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\learnhub\app\Controllers\LoginGuru.php(43): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\learnhub\system\CodeIgniter.php(933): App\Controllers\LoginGuru->prosesLoginGuru()
+#8 C:\laragon\www\learnhub\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginGuru))
+#9 C:\laragon\www\learnhub\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\learnhub\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\learnhub\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\learnhub\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db-learhub' in C:\laragon\www\learnhub\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\learnhub\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\learnhub\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\learnhub\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\learnhub\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\learnhub\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\learnhub\app\Controllers\LoginGuru.php(43): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\learnhub\system\CodeIgniter.php(933): App\Controllers\LoginGuru->prosesLoginGuru()
+#7 C:\laragon\www\learnhub\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginGuru))
+#8 C:\laragon\www\learnhub\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\learnhub\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\learnhub\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\learnhub\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-11-07 07:10:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db-learhub'
+[Method: POST, Route: proses_login_guru]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_guru`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\LoginGuru.php(43): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginGuru->prosesLoginGuru()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginGuru))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
