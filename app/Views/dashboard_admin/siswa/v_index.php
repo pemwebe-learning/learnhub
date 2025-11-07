@@ -20,18 +20,24 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>iyan mariyan</td>
-                <td>iyan@guru.com</td>
-                <td>********</td>
-                <td> 10 </td>
-                <td>
-                  <img src="https://via.placeholder.com/50" alt="Foto Guru" class="img-circle elevation-2" width="50" height="50">
-                </td>
-                <td class="text-center align-middle">
-                  <div class="btn-group" role="group">
-                    <a href="#" class="btn btn-success btn-sm" title="Lihat">
+            <?php if (!empty($siswa)): ?>
+            <?php foreach ($siswa as $i => $a): ?>
+                <tr>
+                    <td><?= $i + 1 ?></td>
+                    
+                    <td><?= esc($a['nama_siswa']) ?></td>
+                    <td><?= esc($a['email']) ?></td>
+                    <td><?= esc($a['no_hp']) ?></td>
+                    <td><?= esc($a['jenis_kelamin']) ?></td>
+                    <td>
+                        <?php if ($a['foto']): ?>
+                            <img src="<?= base_url('siswa/' . $a['foto']) ?>" alt="Foto" width="50" height="50" class="rounded-circle">
+                        <?php else: ?>
+                            <span class="text-muted">Tidak ada</span>
+                        <?php endif; ?>
+                    </td>
+                    <td>
+                        <a href="#" class="btn btn-success btn-sm" title="Lihat">
                       <i class="fas fa-eye"></i>
                     </a>
                     <a href="#" class="btn btn-warning btn-sm" title="Edit">
@@ -39,10 +45,12 @@
                     </a>
                     <a href="#" class="btn btn-danger btn-sm" title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini?');">
                       <i class="fas fa-trash"></i>
-                    </a>
-                  </div>
-                </td>
-              </tr>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <tr><td colspan="7" class="text-center text-muted">Belum ada data admin.</td></tr>
+        <?php endif; ?>
             </tbody>
           </table>
         </div>

@@ -1,0 +1,10 @@
+CRITICAL - 2025-11-06 15:55:02 --> ErrorException: Undefined array key "id_user"
+[Method: POST, Route: proses_login_admin]
+in APPPATH\Controllers\LoginAdmin.php on line 54.
+ 1 APPPATH\Controllers\LoginAdmin.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_user"', 'D:\\laragon\\www\\learnhub\\app\\Controllers\\LoginAdmin.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginAdmin->prosesLoginAdmin()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

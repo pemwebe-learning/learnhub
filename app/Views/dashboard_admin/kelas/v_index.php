@@ -10,37 +10,31 @@
           <table class="table table-bordered table-hover mb-0 text-center align-middle">
             <thead class="table-dark">
               <tr>
-                <th style="width: 50px">No</th>
-                <th>Nama</th>
-                <th>Email</th>
-                <th>Password</th>
-                <th>Foto</th>
-                <th style="width: 120px">Aksi</th>
+                <th style="width: 100px">No</th>
+                <th style="width: 500px;">Kelas</th>
+                <th style="width: 500px;">Tingkat</th>
+                <th>Aksi</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>iyan mariyan</td>
-                <td>iyan@guru.com</td>
-                <td>********</td>
-                <td>
-                  <img src="https://via.placeholder.com/50" alt="Foto Guru" class="img-circle elevation-2" width="50" height="50">
-                </td>
-                <td class="text-center align-middle">
-                  <div class="btn-group" role="group">
-                    <a href="#" class="btn btn-success btn-sm" title="Lihat">
-                      <i class="fas fa-eye"></i>
-                    </a>
+              <?php if (!empty($kelas)): ?>
+            <?php foreach ($kelas as $i => $a): ?>
+                <tr>
+                    <td><?= $i + 1 ?></td>
+                    <td><?= esc($a['nama_kelas']) ?></td>
+                    <td><?= esc($a['id_tingkat']) ?></td>
+                    <td>
                     <a href="#" class="btn btn-warning btn-sm" title="Edit">
                       <i class="fas fa-edit"></i>
                     </a>
                     <a href="#" class="btn btn-danger btn-sm" title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini?');">
                       <i class="fas fa-trash"></i>
-                    </a>
-                  </div>
-                </td>
-              </tr>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <tr><td colspan="7" class="text-center text-muted">Belum ada data kelas.</td></tr>
+        <?php endif; ?>
             </tbody>
           </table>
         </div>

@@ -6,6 +6,12 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
+//login admin
+$routes->get('login_admin', 'LoginAdmin::index');
+$routes->post('proses_login_admin', 'LoginAdmin::prosesLoginAdmin');
+//login guru
+$routes->get('login_guru', 'LoginGuru::index');
+$routes->post('proses_login_guru', 'LoginGuru::prosesLoginGuru');
 
 // ROUTING ADMIN
 $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($routes) {

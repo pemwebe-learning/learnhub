@@ -1,0 +1,150 @@
+CRITICAL - 2025-11-04 14:55:25 --> ErrorException: Undefined array key "kelas"
+[Method: GET, Route: admin/kelas]
+in APPPATH\Views\dashboard_admin\kelas\v_index.php on line 24.
+ 1 APPPATH\Views\dashboard_admin\kelas\v_index.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_index.php', 24)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_admin/kelas/v_index', [], true)
+ 5 APPPATH\Views\v_template_admin.php(179): view('dashboard_admin/kelas/v_index')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 9 APPPATH\Controllers\Admin\KelasController.php(26): view('v_template_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\KelasController->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\KelasController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-04 15:15:24 --> mysqli_sql_exception: Unknown column 'tb_kelas.id_tingkat' in 'on clause' in D:\laragon\www\learnhub\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\laragon\www\learnhub\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tb_kela...', 0)
+#1 D:\laragon\www\learnhub\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_kela...')
+#2 D:\laragon\www\learnhub\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_kela...')
+#3 D:\laragon\www\learnhub\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_kela...', Array, false)
+#4 D:\laragon\www\learnhub\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\laragon\www\learnhub\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\laragon\www\learnhub\app\Models\ModelKelas.php(55): CodeIgniter\BaseModel->findAll()
+#7 D:\laragon\www\learnhub\app\Controllers\Admin\KelasController.php(22): App\Models\ModelKelas->getKelasWithTingkat()
+#8 D:\laragon\www\learnhub\system\CodeIgniter.php(933): App\Controllers\Admin\KelasController->index()
+#9 D:\laragon\www\learnhub\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\KelasController))
+#10 D:\laragon\www\learnhub\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\laragon\www\learnhub\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 D:\laragon\www\learnhub\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\laragon\www\learnhub\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-11-04 15:15:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tb_kelas.id_tingkat' in 'on clause'
+[Method: GET, Route: admin/kelas]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_kelas`.*, `tb_tingkat`.`tingkat`
+FROM `tb_kelas`
+JOIN `tb_tingkat` ON `tb_tingkat`.`id_tingkat` = `tb_kelas`.`id_tingkat`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\ModelKelas.php(55): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Admin\KelasController.php(22): App\Models\ModelKelas->getKelasWithTingkat()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\KelasController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\KelasController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-04 15:15:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tb_kelas.id_tingkat' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_kelas`.*, `tb_tingkat`.`tingkat`
+FROM `tb_kelas`
+JOIN `tb_tingkat` ON `tb_tingkat`.`id_tingkat` = `tb_kelas`.`id_tingkat`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_kelas`.*, `tb_tingkat`.`tingkat`
+FROM `tb_kelas`
+JOIN `tb_tingkat` ON `tb_tingkat`.`id_tingkat` = `tb_kelas`.`id_tingkat`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_kelas`.*, `tb_tingkat`.`tingkat`
+FROM `tb_kelas`
+JOIN `tb_tingkat` ON `tb_tingkat`.`id_tingkat` = `tb_kelas`.`id_tingkat`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\ModelKelas.php(55): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Admin\KelasController.php(22): App\Models\ModelKelas->getKelasWithTingkat()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\KelasController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\KelasController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-04 15:15:24 --> [Caused by] mysqli_sql_exception: Unknown column 'tb_kelas.id_tingkat' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tb_kelas`.*, `tb_tingkat`.`tingkat`
+FROM `tb_kelas`
+JOIN `tb_tingkat` ON `tb_tingkat`.`id_tingkat` = `tb_kelas`.`id_tingkat`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_kelas`.*, `tb_tingkat`.`tingkat`
+FROM `tb_kelas`
+JOIN `tb_tingkat` ON `tb_tingkat`.`id_tingkat` = `tb_kelas`.`id_tingkat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_kelas`.*, `tb_tingkat`.`tingkat`
+FROM `tb_kelas`
+JOIN `tb_tingkat` ON `tb_tingkat`.`id_tingkat` = `tb_kelas`.`id_tingkat`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_kelas`.*, `tb_tingkat`.`tingkat`
+FROM `tb_kelas`
+JOIN `tb_tingkat` ON `tb_tingkat`.`id_tingkat` = `tb_kelas`.`id_tingkat`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ModelKelas.php(55): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\KelasController.php(22): App\Models\ModelKelas->getKelasWithTingkat()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\KelasController->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\KelasController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-04 15:20:37 --> ErrorException: Undefined array key "tingkat"
+[Method: GET, Route: admin/kelas]
+in APPPATH\Views\dashboard_admin\kelas\v_index.php on line 25.
+ 1 APPPATH\Views\dashboard_admin\kelas\v_index.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tingkat"', 'D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_index.php', 25)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_admin/kelas/v_index', [], true)
+ 5 APPPATH\Views\v_template_admin.php(179): view('dashboard_admin/kelas/v_index')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 9 APPPATH\Controllers\Admin\KelasController.php(26): view('v_template_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\KelasController->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\KelasController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-04 15:20:38 --> ErrorException: Undefined array key "tingkat"
+[Method: GET, Route: admin/kelas]
+in APPPATH\Views\dashboard_admin\kelas\v_index.php on line 25.
+ 1 APPPATH\Views\dashboard_admin\kelas\v_index.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tingkat"', 'D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_index.php', 25)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_admin/kelas/v_index', [], true)
+ 5 APPPATH\Views\v_template_admin.php(179): view('dashboard_admin/kelas/v_index')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 9 APPPATH\Controllers\Admin\KelasController.php(26): view('v_template_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\KelasController->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\KelasController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-04 15:21:46 --> ErrorException: Undefined array key "tingkat"
+[Method: GET, Route: admin/kelas]
+in APPPATH\Views\dashboard_admin\kelas\v_index.php on line 25.
+ 1 APPPATH\Views\dashboard_admin\kelas\v_index.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tingkat"', 'D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_index.php', 25)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_admin/kelas/v_index', [], true)
+ 5 APPPATH\Views\v_template_admin.php(179): view('dashboard_admin/kelas/v_index')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 9 APPPATH\Controllers\Admin\KelasController.php(26): view('v_template_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\KelasController->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\KelasController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

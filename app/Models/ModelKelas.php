@@ -4,24 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ModelSiswa extends Model
+class ModelKelas extends Model
 {
-    protected $table            = 'tb_siswa';
-    protected $primaryKey       = 'id_siswa';
+    protected $table            = 'tb_kelas';
+    protected $primaryKey       = 'id_kelas';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'nama_siswa',
-        'email',
-        'password',
-        'alamat',
-        'jenis_kelamin',
-        'no_hp',
-        'foto',
-        'created_at',
-        'id_kelas'
+        'nama_kelas',
+        'id_tingkat'
     ];
 
     protected bool $allowEmptyInserts = false;
@@ -54,19 +47,22 @@ class ModelSiswa extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function getSiswaWithKelas()
+    // Relasi ke tabel kelas
+    public function getKelasWithTingkat()
     {
-       return $this->select('tb_siswa.*, tb_kelas.nama_kelas')
-                    ->join('tb_kelas', 'tb_kelas.id_kelas = tb_siswa.id_kelas')
+        return $this->select('tb_kelas.*, tb_tingkat.tingkat')
+                    ->join('tb_tingkat', 'tb_tingkat.id_tingkat = tb_kelas.id_tingkat')
                     ->findAll();
     }
 
     // Relasi satu data
-    public function getDetailkelas($id)
+    public function getDetailTingkat($id)
     {
-        return $this->select('tb_siswa.*, tb_kelas.nama_kelas')
-                    ->join('tb_kelas', 'tb_kelas.id_kelas = tb_siswa.id_kelas')
-                    ->where('tb_siswa.id_siswa', $id)
+        return $this->select('tb_kelas.*, tb_tingkat.tingkat')
+                    ->join('tb_tingkat', 'tb_tingkat.id_tingkat = tb_kelas.id_tingkat')
+                    ->where('tb_kelas.id_kelas', $id)
                     ->first();
     }
 }
+
+

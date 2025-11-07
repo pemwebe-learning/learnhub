@@ -81,13 +81,16 @@ class ModelGuru extends Model
     protected $cleanValidationRules = true;
 
     // Callbacks
-    protected $allowCallbacks = true;
-    protected $beforeInsert   = [];
-    protected $afterInsert    = [];
-    protected $beforeUpdate   = [];
-    protected $afterUpdate    = [];
-    protected $beforeFind     = [];
-    protected $afterFind      = [];
-    protected $beforeDelete   = [];
-    protected $afterDelete    = [];
+    protected $beforeInsert   = ['hashPassword'];
+    protected $beforeUpdate   = ['hashPassword'];
+
+    protected function hashPassword(array $data)
+    {
+        if (!empty($data['data']['password'])) {
+            $data['data']['password'] = password_hash($data['data']['password'], PASSWORD_DEFAULT);
+        } else {
+            unset($data['data']['password']);
+        }
+        return $data;
+    }
 }
