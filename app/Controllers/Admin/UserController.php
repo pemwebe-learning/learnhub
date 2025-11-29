@@ -45,6 +45,7 @@ class UserController extends BaseController
             'alamat'        => $this->request->getPost('alamat'),
             'no_hp'         => $this->request->getPost('no_hp'),
             'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
+            'foto' => $this->request->getPost('foto')
         ];
 
         // Proses upload foto ke folder public/admin

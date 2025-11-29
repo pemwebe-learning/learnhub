@@ -31,7 +31,7 @@
                     <a href="<?= base_url('admin/kelas/edit/'. $a['id_kelas']) ?>" class="btn btn-warning btn-sm" title="Edit">
                       <i class="fas fa-edit"></i>
                     </a>
-                    <a href="#" class="btn btn-danger btn-sm" title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini?');">
+                    <a href="<?= base_url('admin/kelas/delete/'. $a['id_kelas']) ?>" class="btn btn-danger btn-sm" title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini?');">
                       <i class="fas fa-trash"></i>
                     </td>
                 </tr>

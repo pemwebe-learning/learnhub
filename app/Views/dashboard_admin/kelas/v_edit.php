@@ -10,7 +10,7 @@
               session();
               $validation = \Config\Services::validation();
               ?>
-              <?php echo form_open_multipart('admin/kelas/update') ?>
+              <?php echo form_open_multipart('admin/kelas/update/'. $kelas['id_kelas']) ?>
 
                 <div class="row">
                   <div class="col-sm-3">
@@ -25,9 +25,9 @@
                     <label>Kelas</label>
                     <select class="form-control" name="id_tingkat" required>
                         <option value="">-- Pilih Tingkat --</option>
-                        <?php foreach ($tingkat as $row) : ?>
-                            <option value="<?= $row['id_tingkat']; ?>"><?= $row['tingkat']; ?></option>
-                        <?php endforeach; ?>
+                        <?php foreach ($tingkat as $key => $value) { ?>
+                        <option value="<?= $value['id_tingkat'] ?>" <?= $value['id_tingkat'] == $kelas['id_tingkat'] ? 'selected' : '' ?>><?= $value['tingkat'] ?></option>
+                        <?php } ?>
                     </select>
                   </div>                        
                   </div>

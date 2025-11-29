@@ -33,7 +33,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->post('kelas/insertdata', 'KelasController::InsertData');
     $routes->get('kelas/edit/(:num)', 'KelasController::edit/$1');
     $routes->post('kelas/update/(:num)', 'KelasController::UpdateData/$1');
-    // $routes->get('kelas/delete/(:num)', 'KelasController::delete/$1');
+    $routes->get('kelas/delete/(:num)', 'KelasController::delete/$1');
 
     // 📚 Mapel Management
     $routes->get('mapel', 'MapelController::index');

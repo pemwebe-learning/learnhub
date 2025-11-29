@@ -64,7 +64,7 @@ class KelasController extends BaseController
             'judul' => 'Input Kelas',
             'menu' => 'input_kelas',
             'page' => 'dashboard_admin/kelas/v_edit',
-            'kelas' => $this->ModelKelas->findAll() ,
+            'kelas' => $this->ModelKelas->getDetailTingkat($id_kelas),
             'detail_kelas' => $this->ModelKelas->getKelasWithTingkat(),
             'tingkat' => $this->ModelTingkat->findAll(),
         ];
@@ -80,7 +80,23 @@ class KelasController extends BaseController
             'id_tingkat'  => $this->request->getPost('id_tingkat'),
         ];
 
-        if (!$this->ModelKelas->update($id_kelas)) {
+        if (!$this->ModelKelas->update($id_kelas, $data)) {
+            return redirect()->back()->withInput()
+                ->with('errors', $this->ModelKelas->errors());
+        }
+
+        session()->setFlashdata('success', 'Data kelas berhasil disimpan.');
+        return redirect()->to('/admin/kelas');
+    }
+
+     public function delete($id_kelas)
+    {
+        $kelas = $this->ModelKelas->getKelasWithTingkat();
+        $data = [
+            'id_kelas' => $id_kelas,
+        ];
+
+        if (!$this->ModelKelas->delete($data )) {
             return redirect()->back()->withInput()
                 ->with('errors', $this->ModelKelas->errors());
         }
