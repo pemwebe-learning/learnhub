@@ -12,7 +12,7 @@
               ?>
               <?php echo form_open_multipart('admin/guru/insertdata') ?>
 
-               <div class="row">
+              <div class="row">
                   <div class="col-sm-3">
                   <div class="form-group">
                     <label>Email</label>
@@ -59,7 +59,8 @@
                     <p class="text-danger"><?= $validation->hasError('no_hp') ? $validation->getError('no_hp') : '' ?></p>
                   </div>                        
                   </div>
-                </div>             
+                </div>   
+                  
             <button class="btn btn-primary btn-flat" type="submit">Simpan</button>
             <a href="<?= base_url('admin/guru') ?>"class="btn btn-success btn-flat">Kembali</a>
 

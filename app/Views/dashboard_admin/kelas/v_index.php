@@ -4,7 +4,11 @@
       <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
           <h3 class="card-title mb-0">Data kelas</h3>
+          <a href="<?= base_url('admin/kelas/input') ?>" class="btn btn-flat btn-primary btn-sm">
+          <i class="fas fa-plus"></i> Tambah
+          </a>
         </div>
+        
 
         <div class="card-body p-0">
           <table class="table table-bordered table-hover mb-0 text-center align-middle">
@@ -18,13 +22,13 @@
             </thead>
             <tbody>
               <?php if (!empty($kelas)): ?>
-            <?php foreach ($kelas as $i => $a): ?>
+            <?php foreach ($detail_kelas as $i => $a): ?>
                 <tr>
                     <td><?= $i + 1 ?></td>
                     <td><?= esc($a['nama_kelas']) ?></td>
-                    <td><?= esc($a['id_tingkat']) ?></td>
+                    <td><?= esc($a['tingkat']) ?></td>
                     <td>
-                    <a href="#" class="btn btn-warning btn-sm" title="Edit">
+                    <a href="<?= base_url('admin/kelas/edit/'. $a['id_kelas']) ?>" class="btn btn-warning btn-sm" title="Edit">
                       <i class="fas fa-edit"></i>
                     </a>
                     <a href="#" class="btn btn-danger btn-sm" title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini?');">

@@ -29,10 +29,10 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
 
     // 🏫 Kelas Management
     $routes->get('kelas', 'KelasController::index');
-    // $routes->get('kelas/create', 'KelasController::create');
-    // $routes->post('kelas/store', 'KelasController::store');
-    // $routes->get('kelas/edit/(:num)', 'KelasController::edit/$1');
-    // $routes->post('kelas/update/(:num)', 'KelasController::update/$1');
+    $routes->get('kelas/input', 'KelasController::input');
+    $routes->post('kelas/insertdata', 'KelasController::InsertData');
+    $routes->get('kelas/edit/(:num)', 'KelasController::edit/$1');
+    $routes->post('kelas/update/(:num)', 'KelasController::UpdateData/$1');
     // $routes->get('kelas/delete/(:num)', 'KelasController::delete/$1');
 
     // 📚 Mapel Management
