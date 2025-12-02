@@ -85,7 +85,7 @@ class KelasController extends BaseController
                 ->with('errors', $this->ModelKelas->errors());
         }
 
-        session()->setFlashdata('success', 'Data kelas berhasil disimpan.');
+        session()->setFlashdata('success', 'Data kelas berhasil Edit.');
         return redirect()->to('/admin/kelas');
     }
 

@@ -23,9 +23,9 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->get('user', 'UserController::index');
     $routes->get('user/input/', 'UserController::input');
     $routes->post('user/insertdata', 'UserController::InsertData');
-    // $routes->get('users/edit/(:num)', 'UserController::edit/$1');
-    // $routes->post('users/update/(:num)', 'UserController::update/$1');
-    // $routes->get('users/delete/(:num)', 'UserController::delete/$1');
+    $routes->get('user/edit/(:num)', 'UserController::edit/$1');
+    $routes->post('user/update/(:num)', 'UserController::UpdateData/$1');
+    $routes->get('user/delete/(:num)', 'UserController::delete/$1');
 
     // 🏫 Kelas Management
     $routes->get('kelas', 'KelasController::index');

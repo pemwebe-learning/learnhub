@@ -44,7 +44,7 @@
                       <a href="#" class="btn btn-success btn-sm" title="Lihat">
                         <i class="fas fa-eye"></i>
                       </a>
-                      <a href="#" class="btn btn-warning btn-sm" title="Edit">
+                      <a href="<?= base_url('admin/user/edit/' . $a['id_admin']) ?>" class="btn btn-warning btn-sm" title="Edit">
                         <i class="fas fa-edit"></i>
                       </a>
                       <a href="#" class="btn btn-danger btn-sm" title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini?');">

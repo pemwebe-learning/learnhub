@@ -37,7 +37,6 @@ class ModelAdmin extends Model
         'alamat'        => 'permit_empty|max_length[255]',
         'no_hp'         => 'required|numeric|min_length[10]|max_length[15]',
         'jenis_kelamin' => 'required|in_list[Laki-laki,Perempuan]',
-        'foto'          => 'permit_empty|is_image[foto]|mime_in[foto,image/jpg,image/jpeg,image/png]|max_size[foto,2048]'
     ];
 
     protected $validationMessages = [
@@ -65,12 +64,11 @@ class ModelAdmin extends Model
         'jenis_kelamin' => [
             'required' => 'Jenis kelamin wajib dipilih.',
         ],
-        'foto' => [
-            'is_image' => 'File harus berupa gambar.',
-            'mime_in'  => 'Format foto harus JPG atau PNG.',
-            'max_size' => 'Ukuran foto maksimal 2MB.',
-        ],
+        'alamat' => [
+            'max_length' => 'Alamat tidak boleh lebih dari 255 karakter.'
+        ]
     ];
+     protected $skipValidation       = false;
 
     // Callbacks
     protected $beforeInsert   = ['hashPassword'];
