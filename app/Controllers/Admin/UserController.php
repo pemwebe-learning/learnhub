@@ -108,12 +108,10 @@ class UserController extends BaseController
         $file = $this->request->getFile('foto');
 
         /*
-        * CEK FILE FOTO
-        * getError() == 4  → Tidak ada file diupload
+        * Validasi foto hanya jika user memilih file baru
         */
         $rulesFile = [];
-        if ($file->getError() != 4) {
-            // Ada file baru → jalankan validasi
+        if ($file->getError() != 4) { 
             $rulesFile = [
                 'foto' => [
                     'rules' => 'is_image[foto]|max_size[foto,2048]|mime_in[foto,image/jpg,image/jpeg,image/png]',
@@ -126,9 +124,12 @@ class UserController extends BaseController
             ];
         }
 
-        if (!$this->validate($rulesFile)) {
-            return redirect()->back()->withInput()->with('errors', $validation->getErrors());
+        if (!empty($rulesFile)) {
+            if (!$this->validate($rulesFile)) {
+                return redirect()->back()->withInput()->with('errors', $validation->getErrors());
+            }
         }
+
 
         // Data utama
         $data = [
@@ -139,19 +140,25 @@ class UserController extends BaseController
             'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
         ];
 
-        // PASSWORD (boleh kosong)
+        // PASSWORD opsional
         $password = $this->request->getPost('password');
         if (!empty($password)) {
             $data['password'] = password_hash($password, PASSWORD_DEFAULT);
         }
 
-        // FOTO
+        /*
+        * FOTO opsional
+        * Jika tidak upload foto baru → tetap gunakan foto lama
+        */
         $fotoBaru = null;
 
         if ($file->getError() != 4) { 
-            // Ada foto baru
+            // Upload foto baru
             $fotoBaru = $file->getRandomName();
-            $data['foto'] = $fotoBaru;
+            $data['foto'] = $fotoBaru; // update foto di DB
+        } else {
+            // Tidak pilih foto baru → tetap pakai foto lama
+            $data['foto'] = $admin['foto'];
         }
 
         // Update database
@@ -160,7 +167,7 @@ class UserController extends BaseController
                 ->with('errors', $this->ModelAdmin->errors());
         }
 
-        // Jika ada foto baru → hapus foto lama → upload foto baru
+        // Jika ada foto baru → hapus lama → upload baru
         if ($fotoBaru) {
 
             // Hapus foto lama
@@ -168,13 +175,49 @@ class UserController extends BaseController
                 unlink('uploads/admin/' . $admin['foto']);
             }
 
-            // Move foto baru
+            // Upload foto baru
             $file->move('uploads/admin/', $fotoBaru);
         }
 
         session()->setFlashdata('success', 'Data admin berhasil diupdate.');
         return redirect()->to('/admin/user');
     }
+
+    public function DeleteData($id_admin)
+    {
+        // Ambil data admin
+        $admin = $this->ModelAdmin->find($id_admin);
+
+        if (!$admin) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data admin tidak ditemukan');
+        }
+
+        // Hapus foto jika ada
+        if (!empty($admin['foto'])) {
+            $pathFoto = 'uploads/admin/' . $admin['foto'];
+
+            if (file_exists($pathFoto)) {
+                unlink($pathFoto); // hapus file foto
+            }
+        }
+
+        // Hapus data admin dari database
+        $this->ModelAdmin->delete($id_admin);
+
+        session()->setFlashdata('success', 'Data admin berhasil dihapus.');
+        return redirect()->to('/admin/user');
+    }
+
+    public function DetailData($id_admin) {
+        $data = [
+            'judul' => 'Input Admin',
+            'menu' => 'input_admin',
+            'page' => 'dashboard_admin/user/v_detail',
+            'admins' => $this->ModelAdmin->find($id_admin),
+        ];
+        return view('v_template_admin' ,$data);
+    }
+
 
 
 }

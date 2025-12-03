@@ -80,9 +80,13 @@
                     <div class="form-group">
                       <div class="form-group">
                         <label>Foto</label>
+                        <div>
+                        <img type="image" src="<?= base_url('uploads/admin/'. $admins['foto']) ?>" width="250px">
+                        </div>
                         <input type="file" name="foto" class="form-control">
                         <small class="text-muted">Kosongkan jika tidak ingin mengganti foto.</small>
                     </div>
+                    
                     </div>
                   </div>    
                 </div>          

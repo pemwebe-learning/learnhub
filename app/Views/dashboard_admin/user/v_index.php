@@ -41,13 +41,13 @@
                     <td><?= esc($a['no_hp']) ?></td>
                     <td><?= esc($a['jenis_kelamin']) ?></td>
                     <td>
-                      <a href="#" class="btn btn-success btn-sm" title="Lihat">
+                      <a href="<?= base_url('admin/user/detail/' . $a['id_admin']) ?>" class="btn btn-success btn-sm" title="Lihat">
                         <i class="fas fa-eye"></i>
                       </a>
                       <a href="<?= base_url('admin/user/edit/' . $a['id_admin']) ?>" class="btn btn-warning btn-sm" title="Edit">
                         <i class="fas fa-edit"></i>
                       </a>
-                      <a href="#" class="btn btn-danger btn-sm" title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini?');">
+                      <a href="<?= base_url('admin/user/delete/' . $a['id_admin']) ?>" class="btn btn-danger btn-sm" title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini?');">
                         <i class="fas fa-trash"></i>
                       </a>
                     </td>

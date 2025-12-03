@@ -105,4 +105,6 @@ class KelasController extends BaseController
         return redirect()->to('/admin/kelas');
     }
 
+    
+
 }
