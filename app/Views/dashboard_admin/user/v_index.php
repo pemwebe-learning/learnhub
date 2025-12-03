@@ -31,7 +31,7 @@
                     <td><?= $i + 1 ?></td>
                     <td>
                         <?php if ($a['foto']): ?>
-                            <img src="<?= base_url('admin/' . $a['foto']) ?>" alt="Foto" width="50" height="50" class="rounded-circle">
+                            <img src="<?= base_url('uploads/admin/' . $a['foto']) ?>" alt="Foto" width="50" height="50" class="rounded-circle">
                         <?php else: ?>
                             <span class="text-muted">Tidak ada</span>
                         <?php endif; ?>

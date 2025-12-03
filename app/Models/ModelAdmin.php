@@ -32,7 +32,7 @@ class ModelAdmin extends Model
     // Validation
     protected $validationRules = [
         'nama_admin'    => 'required|min_length[3]|max_length[100]',
-        'email'         => 'required|valid_email|is_unique[tb_admin.email]',
+        'email'         => 'required|valid_email|',
         'password'      => 'required|min_length[6]|max_length[50]',
         'alamat'        => 'permit_empty|max_length[255]',
         'no_hp'         => 'required|numeric|min_length[10]|max_length[15]',
@@ -48,7 +48,6 @@ class ModelAdmin extends Model
         'email' => [
             'required'    => 'Email wajib diisi.',
             'valid_email' => 'Format email tidak valid.',
-            'is_unique'   => 'Email sudah digunakan.',
         ],
         'password' => [
             'required'   => 'Password wajib diisi.',
