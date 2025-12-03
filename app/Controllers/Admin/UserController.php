@@ -86,8 +86,8 @@ class UserController extends BaseController
 
      public function edit ($id_admin) {
         $data = [
-            'judul' => 'Input Admin',
-            'menu' => 'input_admin',
+            'judul' => 'Edit Admin',
+            'menu' => 'edit_admin',
             'page' => 'dashboard_admin/user/v_edit',
             'admins' => $this->ModelAdmin->find($id_admin),
         ];
@@ -210,14 +210,12 @@ class UserController extends BaseController
 
     public function DetailData($id_admin) {
         $data = [
-            'judul' => 'Input Admin',
-            'menu' => 'input_admin',
+            'judul' => 'Detail Admin',
+            'menu' => 'detail_admin',
             'page' => 'dashboard_admin/user/v_detail',
             'admins' => $this->ModelAdmin->find($id_admin),
         ];
         return view('v_template_admin' ,$data);
     }
-
-
 
 }

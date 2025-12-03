@@ -19,9 +19,7 @@
                 <th>Foto</th>
                 <th>Nama</th>
                 <th>Email</th>
-                <th>No HP</th>
-                <th>Jenis Kelamin</th>
-                <th style="width: 120px">Aksi</th>
+                <th style="width: 150px">Aksi</th>
               </tr>
             </thead>
         <tbody>
@@ -38,8 +36,6 @@
                     </td>
                     <td><?= esc($a['nama_admin']) ?></td>
                     <td><?= esc($a['email']) ?></td>
-                    <td><?= esc($a['no_hp']) ?></td>
-                    <td><?= esc($a['jenis_kelamin']) ?></td>
                     <td>
                       <a href="<?= base_url('admin/user/detail/' . $a['id_admin']) ?>" class="btn btn-success btn-sm" title="Lihat">
                         <i class="fas fa-eye"></i>

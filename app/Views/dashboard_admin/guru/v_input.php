@@ -59,7 +59,18 @@
                     <p class="text-danger"><?= $validation->hasError('no_hp') ? $validation->getError('no_hp') : '' ?></p>
                   </div>                        
                   </div>
-                </div>   
+                
+                </div> 
+                <div class="row">
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <input name="foto" type="file" accept="image/*" class="form-control <?= isset(session('errors')['foto']) ? 'is-invalid' : '' ?>" placeholder="masukan foto">
+                      <div class="invalid-feedback">
+                          <?= session('errors')['foto'] ?? '' ?>
+                      </div>
+                    </div>
+                  </div>
+                </div>  
                   
             <button class="btn btn-primary btn-flat" type="submit">Simpan</button>
             <a href="<?= base_url('admin/guru') ?>"class="btn btn-success btn-flat">Kembali</a>

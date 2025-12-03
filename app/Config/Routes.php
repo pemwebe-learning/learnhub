@@ -60,6 +60,11 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->get('guru', 'GuruController::index');
     $routes->get('guru/input', 'GuruController::input');
     $routes->post('guru/insertdata', 'GuruController::InsertData');
+    $routes->get('guru/edit/(:num)', 'GuruController::edit/$1');
+    $routes->post('guru/update/(:num)', 'GuruController::UpdateData/$1');
+    $routes->get('guru/delete/(:num)', 'GuruController::DeleteData/$1');
+    $routes->get('guru/detail/(:num)', 'GuruController::DetailData/$1');
+
 
     //siswa
     $routes->get('siswa', 'SiswaController::index');

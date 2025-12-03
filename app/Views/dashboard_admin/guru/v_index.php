@@ -16,10 +16,8 @@
             <thead class="table-dark">
               <tr>
                 <th style="width: 50px">No</th>
-                <th style="width: 300px;">Nama</th>
-                <th style="width: 300px;">Email</th>
-                <th>No HP</th>
-                <th>jenis kelamin</th>
+                <th>Nama</th>
+                <th>Email</th>
                 <th>foto</th>
                 <th style="width: 150px">Aksi</th>
               </tr>
@@ -32,23 +30,21 @@
                     
                     <td><?= esc($a['nama_guru']) ?></td>
                     <td><?= esc($a['email']) ?></td>
-                    <td><?= esc($a['no_hp']) ?></td>
-                    <td><?= esc($a['jenis_kelamin']) ?></td>
                     <td>
                         <?php if ($a['foto']): ?>
-                            <img src="<?= base_url('guru/' . $a['foto']) ?>" alt="Foto" width="50" height="50" class="rounded-circle">
+                            <img src="<?= base_url('uploads/guru/' . $a['foto']) ?>" alt="Foto" width="50" height="50" class="rounded-circle">
                         <?php else: ?>
                             <span class="text-muted">Tidak ada</span>
                         <?php endif; ?>
                     </td>
                     <td>
-                        <a href="#" class="btn btn-success btn-sm" title="Lihat">
+                        <a href="<?= base_url('admin/guru/detail/' . $a['id_guru']) ?>" class="btn btn-success btn-sm" title="Lihat">
                       <i class="fas fa-eye"></i>
                     </a>
-                    <a href="#" class="btn btn-warning btn-sm" title="Edit">
+                    <a href="<?= base_url('admin/guru/edit/' . $a['id_guru']) ?>" class="btn btn-warning btn-sm" title="Edit">
                       <i class="fas fa-edit"></i>
                     </a>
-                    <a href="#" class="btn btn-danger btn-sm" title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini?');">
+                    <a href="<?= base_url('admin/guru/delete/' . $a['id_guru']) ?>" class="btn btn-danger btn-sm" title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini?');">
                       <i class="fas fa-trash"></i>
                     </td>
                 </tr>
