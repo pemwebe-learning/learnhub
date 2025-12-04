@@ -4,7 +4,10 @@
       <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
           <h3 class="card-title mb-0">Data Siswa</h3>
-        </div>
+          <a href="<?= base_url('admin/siswa/input') ?>" class="btn btn-flat btn-primary btn-sm">
+          <i class="fas fa-plus"></i> Tambah
+          </a>
+        </div> 
 
         <div class="card-body p-0">
           <table class="table table-bordered table-hover mb-0 text-center align-middle">
@@ -31,7 +34,7 @@
                     <td><?= esc($a['jenis_kelamin']) ?></td>
                     <td>
                         <?php if ($a['foto']): ?>
-                            <img src="<?= base_url('siswa/' . $a['foto']) ?>" alt="Foto" width="50" height="50" class="rounded-circle">
+                            <img src="<?= base_url('uploads/siswa/' . $a['foto']) ?>" alt="Foto" width="50" height="50" class="rounded-circle">
                         <?php else: ?>
                             <span class="text-muted">Tidak ada</span>
                         <?php endif; ?>

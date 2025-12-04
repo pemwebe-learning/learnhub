@@ -1,0 +1,42 @@
+CRITICAL - 2025-12-04 04:15:17 --> ErrorException: Undefined array key "kelas"
+[Method: GET, Route: admin/siswa/input]
+in APPPATH\Views\dashboard_admin\siswa\v_input.php on line 81.
+ 1 APPPATH\Views\dashboard_admin\siswa\v_input.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\siswa\\v_input.php', 81)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\siswa\\v_input.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_admin/siswa/v_input', [], true)
+ 5 APPPATH\Views\v_template_admin.php(179): view('dashboard_admin/siswa/v_input')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 9 APPPATH\Controllers\Admin\SiswaController.php(43): view('v_template_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\SiswaController->input()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SiswaController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-04 04:19:03 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: admin/siswa/insertdata]
+in SYSTEMPATH\BaseModel.php on line 824.
+ 1 SYSTEMPATH\BaseModel.php(824): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Admin\SiswaController.php(84): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\SiswaController->InsertData()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SiswaController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-04 04:23:36 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: admin/siswa/insertdata]
+in SYSTEMPATH\BaseModel.php on line 824.
+ 1 SYSTEMPATH\BaseModel.php(824): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Admin\SiswaController.php(84): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\SiswaController->InsertData()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SiswaController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

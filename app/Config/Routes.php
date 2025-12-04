@@ -68,6 +68,12 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
 
     //siswa
     $routes->get('siswa', 'SiswaController::index');
+    $routes->get('siswa/input', 'SiswaController::input');
+    $routes->post('siswa/insertdata', 'SiswaController::InsertData');
+    $routes->get('siswa/edit/(:num)', 'SiswaController::edit/$1');
+    $routes->post('siswa/update/(:num)', 'SiswaController::UpdateData/$1');
+    $routes->get('siswa/delete/(:num)', 'SiswaController::DeleteData/$1');
+    $routes->get('siswa/detail/(:num)', 'SiswaController::DetailData/$1');
 });
 
 
