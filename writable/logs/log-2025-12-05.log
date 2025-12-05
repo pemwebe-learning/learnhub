@@ -1,0 +1,36 @@
+CRITICAL - 2025-12-05 13:32:08 --> ErrorException: Undefined array key "nama_kelas"
+[Method: GET, Route: admin/siswa/detail/3]
+in APPPATH\Views\dashboard_admin\siswa\v_detail.php on line 52.
+ 1 APPPATH\Views\dashboard_admin\siswa\v_detail.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kelas"', 'D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\siswa\\v_detail.php', 52)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\siswa\\v_detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_admin/siswa/v_detail', [], true)
+ 5 APPPATH\Views\v_template_admin.php(179): view('dashboard_admin/siswa/v_detail')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 9 APPPATH\Controllers\Admin\SiswaController.php(208): view('v_template_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\SiswaController->DetailData('3')
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SiswaController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-05 13:43:20 --> ErrorException: Undefined array key "nama_kelas"
+[Method: GET, Route: admin/siswa]
+in APPPATH\Views\dashboard_admin\siswa\v_index.php on line 33.
+ 1 APPPATH\Views\dashboard_admin\siswa\v_index.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kelas"', 'D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\siswa\\v_index.php', 33)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\siswa\\v_index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_admin/siswa/v_index', [], true)
+ 5 APPPATH\Views\v_template_admin.php(179): view('dashboard_admin/siswa/v_index')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 9 APPPATH\Controllers\Admin\SiswaController.php(30): view('v_template_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\SiswaController->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SiswaController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

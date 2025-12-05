@@ -10,13 +10,13 @@
               session();
               $validation = \Config\Services::validation();
               ?>
-              <?php echo form_open_multipart('admin/user/update/'. $admins['id_admin']) ?>
+              <?php echo form_open_multipart('admin/siswa/update/'. $siswa['id_siswa']) ?>
 
                <div class="row">
                   <div class="col-sm-3">
                   <div class="form-group">
                     <label>Email</label>
-                    <input type="text" name="email" value="<?= $admins['email'] ?>" placeholder="email" class="form-control <?= isset(session('errors')['email']) ? 'is-invalid' : '' ?>">
+                    <input type="text" name="email" value="<?= $siswa['email'] ?>" placeholder="email" class="form-control <?= isset(session('errors')['email']) ? 'is-invalid' : '' ?>">
                     <div class="invalid-feedback">
                         <?= session('errors')['email'] ?? '' ?>
                     </div>
@@ -36,10 +36,10 @@
 
                   <div class="col-sm-3">
                   <div class="form-group">
-                    <label>Nama Admin</label>
-                    <input type="text" name="nama_admin" value="<?= $admins['nama_admin'] ?>" placeholder="Nama" class="form-control <?= isset(session('errors')['nama_admin']) ? 'is-invalid' : '' ?>">
+                    <label>Nama Siswa</label>
+                    <input type="text" name="nama_siswa" value="<?= $siswa['nama_siswa'] ?>" placeholder="Nama" class="form-control <?= isset(session('errors')['nama_siswa']) ? 'is-invalid' : '' ?>">
                     <div class="invalid-feedback">
-                        <?= session('errors')['nama_admin'] ?? '' ?>
+                        <?= session('errors')['nama_siswa'] ?? '' ?>
                     </div>
                   </div>                        
                   </div>
@@ -48,7 +48,7 @@
                   <div class="col-sm-3">
                   <div class="form-group">
                     <label>alamat</label>
-                    <input type="text" name="alamat" value="<?= $admins['alamat'] ?>" placeholder="alamat" class="form-control <?= isset(session('errors')['alamat']) ? 'is-invalid' : '' ?>">
+                    <input type="text" name="alamat" value="<?= $siswa['alamat'] ?>" placeholder="alamat" class="form-control <?= isset(session('errors')['alamat']) ? 'is-invalid' : '' ?>">
                     <div class="invalid-feedback">
                         <?= session('errors')['alamat'] ?? '' ?>
                     </div>
@@ -58,7 +58,7 @@
                   <div class="col-sm-3">
                   <div class="form-group">
                     <label>jenis kelamin</label>
-                    <input type="text" name="jenis_kelamin" value="<?= $admins['jenis_kelamin'] ?>" placeholder="jenis kelamin" class="form-control <?= isset(session('errors')['jenis_kelamin']) ? 'is-invalid' : '' ?>">
+                    <input type="text" name="jenis_kelamin" value="<?= $siswa['jenis_kelamin'] ?>" placeholder="jenis kelamin" class="form-control <?= isset(session('errors')['jenis_kelamin']) ? 'is-invalid' : '' ?>">
                     <div class="invalid-feedback">
                         <?= session('errors')['jenis_kelamin'] ?? '' ?>
                     </div>
@@ -68,7 +68,7 @@
                   <div class="col-sm-3">
                   <div class="form-group">
                     <label>no hp</label>
-                    <input type="text" name="no_hp" value="<?= $admins['no_hp'] ?>" placeholder="nomor hp" class="form-control <?= isset(session('errors')['no_hp']) ? 'is-invalid' : '' ?>">
+                    <input type="text" name="no_hp" value="<?= $siswa['no_hp'] ?>" placeholder="nomor hp" class="form-control <?= isset(session('errors')['no_hp']) ? 'is-invalid' : '' ?>">
                     <div class="invalid-feedback">
                         <?= session('errors')['no_hp'] ?? '' ?>
                     </div>
@@ -77,21 +77,31 @@
                 </div>
                 <div class="row">
                   <div class="col-sm-3">
-                    <div class="form-group">
                       <div class="form-group">
                         <label>Foto</label>
                         <div>
-                        <img type="image" src="<?= base_url('uploads/admin/'. $admins['foto']) ?>" width="250px">
+                        <img type="image" src="<?= base_url('uploads/siswa/'. $siswa['foto']) ?>" width="250px">
                         </div>
                         <input type="file" name="foto" class="form-control">
-                        <small class="text-muted">Kosongkan jika tidak ingin mengganti foto.</small>
+                        <small class="text-muted">Kosongkan jika tidak ingin mengganti foto.</small>                
+                      </div>
                     </div>
-                    
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label>Kelas</label>
+                        <select class="form-control" name="id_kelas" required>
+                        <option value="">-- Pilih Kelas --</option>
+                        <?php foreach ($detail_kelas as $key => $value) { ?>
+                        <option value="<?= $value['id_kelas'] ?>" <?= $value['id_kelas'] == $siswa['id_kelas'] ? 'selected' : '' ?>><?= $value['nama_kelas'] ?></option>
+                        <?php } ?>
+                        </select>
+                      </div>
                     </div>
-                  </div>    
-                </div>          
+                  </div>              
             <button class="btn btn-primary btn-flat" type="submit">Simpan</button>
-            <a href="<?= base_url('admin/user') ?>"class="btn btn-success btn-flat">Kembali</a>
+            <a href="<?= base_url('admin/siswa') ?>"class="btn btn-success btn-flat">Kembali</a>
 
               <?php echo form_close() ?>
 

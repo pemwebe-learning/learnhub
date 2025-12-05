@@ -20,7 +20,6 @@ class ModelSiswa extends Model
         'jenis_kelamin',
         'no_hp',
         'foto',
-        'created_at',
         'id_kelas'
     ];
 
@@ -48,7 +47,7 @@ class ModelSiswa extends Model
         'id_kelas'         => 'required',
     ];
     protected $validationMessages   = [
-        'nama_guru' => [
+        'nama_siswa' => [
             'required'   => 'Nama admin wajib diisi.',
             'min_length' => 'Nama admin minimal 3 karakter.',
             'max_length' => 'Nama admin maksimal 100 karakter.',
@@ -85,9 +84,9 @@ class ModelSiswa extends Model
 
     // Callbacks
     protected $allowCallbacks = true;
-    protected $beforeInsert   = [];
+    protected $beforeInsert   = ['hashPassword'];
     protected $afterInsert    = [];
-    protected $beforeUpdate   = [];
+    protected $beforeUpdate   = ['hashPassword'];
     protected $afterUpdate    = [];
     protected $beforeFind     = [];
     protected $afterFind      = [];
@@ -113,11 +112,11 @@ class ModelSiswa extends Model
     }
 
     // Relasi satu data
-    public function getDetailkelas($id_kelas)
+    public function getDetailkelas($id_siswa)
     {
         return $this->select('tb_siswa.*, tb_kelas.nama_kelas')
                     ->join('tb_kelas', 'tb_kelas.id_kelas = tb_siswa.id_kelas')
-                    ->where('tb_siswa.id_siswa', $id_kelas)
+                    ->where('tb_siswa.id_siswa', $id_siswa)
                     ->first();
     }
 }

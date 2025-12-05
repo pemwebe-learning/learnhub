@@ -22,7 +22,7 @@
                   </div>
                   <div class="col-sm-3">
                   <div class="form-group">
-                    <label>Kelas</label>
+                    <label>Tingkat</label>
                     <select class="form-control" name="id_tingkat" required>
                         <option value="">-- Pilih Tingkat --</option>
                         <?php foreach ($tingkat as $key => $value) { ?>

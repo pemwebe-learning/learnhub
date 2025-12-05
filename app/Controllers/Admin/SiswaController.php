@@ -89,16 +89,122 @@ class SiswaController extends BaseController
         // --- JIKA DATABASE SUKSES, BARU PINDAHKAN FOTO ---
         $file->move('uploads/siswa/', $newName);
 
-        session()->setFlashdata('success', 'Data admin berhasil disimpan.');
+        session()->setFlashdata('success', 'Data siswa berhasil disimpan.');
         return redirect()->to('/admin/siswa');
     }
 
-     public function edit ($id_admin) {
+     public function edit ($id_siswa) {
         $data = [
-            'judul' => 'Edit Admin',
-            'menu' => 'edit_admin',
-            'page' => 'dashboard_admin/user/v_edit',
-            'admins' => $this->ModelKelas->find($id_admin),
+            'judul' => 'Edit Siswa',
+            'menu' => 'edit_siswa',
+            'page' => 'dashboard_admin/siswa/v_edit',
+            'siswa' => $this->ModelSiswa->find($id_siswa),
+            'detail_kelas' => $this->ModelKelas->getKelasWithTingkat(),
+        ];
+        return view('v_template_admin' ,$data);
+    }
+
+    
+    public function UpdateData($id_siswa)
+    {
+        $siswa = $this->ModelSiswa->find($id_siswa);
+        if (!$siswa) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data siswa tidak ditemukan');
+        }
+
+        $file = $this->request->getFile('foto');
+
+        // Validasi foto hanya jika ada file baru
+        if ($file->getError() != 4) {
+            if (!$this->validate([
+                'foto' => [
+                    'rules' => 'is_image[foto]|max_size[foto,2048]|mime_in[foto,image/jpg,image/jpeg,image/png]',
+                    'errors' => [
+                        'is_image' => 'File harus berupa gambar.',
+                        'max_size' => 'Ukuran maksimal 2MB.',
+                        'mime_in'  => 'Format foto harus JPG/PNG.'
+                    ]
+                ]
+            ])) {
+                return redirect()->back()->withInput()
+                    ->with('errors', $this->validator->getErrors());
+            }
+        }
+
+        // Data utama
+        $data = [
+            'nama_siswa'    => $this->request->getPost('nama_siswa'),
+            'email'         => $this->request->getPost('email'),
+            'alamat'        => $this->request->getPost('alamat'),
+            'no_hp'         => $this->request->getPost('no_hp'),
+            'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
+            'id_kelas'      => $this->request->getPost('id_kelas'),
+        ];
+
+        // Password opsional
+        if (!empty($this->request->getPost('password'))) {
+            $data['password'] = password_hash($this->request->getPost('password'), PASSWORD_DEFAULT);
+        }
+
+        // Foto opsional
+        if ($file->getError() != 4) {
+            $fotoBaru = $file->getRandomName();
+            $data['foto'] = $fotoBaru;
+        } else {
+            $fotoBaru = null;
+            $data['foto'] = $siswa['foto'];
+        }
+
+        // Update database
+        if (!$this->ModelSiswa->update($id_siswa, $data)) {
+            return redirect()->back()->withInput()
+                ->with('errors', $this->ModelSiswa->errors());
+        }
+
+        // Upload foto baru
+        if ($fotoBaru) {
+            if (!empty($siswa['foto']) && file_exists('uploads/siswa/' . $siswa['foto'])) {
+                unlink('uploads/siswa/' . $siswa['foto']);
+            }
+            $file->move('uploads/siswa/', $fotoBaru);
+        }
+
+        session()->setFlashdata('success', 'Data siswa berhasil diupdate.');
+        return redirect()->to('/admin/siswa');
+    }
+
+    public function DeleteData($id_siswa)
+    {
+        // Ambil data admin
+        $siswa = $this->ModelSiswa->find($id_siswa);
+
+        if (!$siswa) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data admin tidak ditemukan');
+        }
+
+        // Hapus foto jika ada
+        if (!empty($admin['foto'])) {
+            $pathFoto = 'uploads/siswa/' . $siswa['foto'];
+
+            if (file_exists($pathFoto)) {
+                unlink($pathFoto); // hapus file foto
+            }
+        }
+
+        // Hapus data admin dari database
+        $this->ModelSiswa->delete($id_siswa);
+
+        session()->setFlashdata('success', 'Data siswa berhasil dihapus.');
+        return redirect()->to('/admin/siswa');
+    }
+
+    public function DetailData($id_siswa) {
+        $data = [
+            'judul' => 'Detail Siswa',
+            'menu' => 'detail_siswa',
+            'page' => 'dashboard_admin/siswa/v_detail',
+            'siswa' => $this->ModelSiswa->getDetailkelas($id_siswa),
+
         ];
         return view('v_template_admin' ,$data);
     }
