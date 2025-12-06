@@ -256,3 +256,334 @@ in APPPATH\Views\dashboard_admin\pengumuman\v_edit.php on line 13.
 13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-06 16:13:50 --> mysqli_sql_exception: Unknown column 'tb_kelas.kelas' in 'field list' in D:\laragon\www\learnhub\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\laragon\www\learnhub\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tb_mape...', 0)
+#1 D:\laragon\www\learnhub\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_mape...')
+#2 D:\laragon\www\learnhub\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_mape...')
+#3 D:\laragon\www\learnhub\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_mape...', Array, false)
+#4 D:\laragon\www\learnhub\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\laragon\www\learnhub\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\laragon\www\learnhub\app\Controllers\Admin\MapelController.php(31): CodeIgniter\BaseModel->findAll()
+#7 D:\laragon\www\learnhub\system\CodeIgniter.php(933): App\Controllers\Admin\MapelController->index()
+#8 D:\laragon\www\learnhub\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MapelController))
+#9 D:\laragon\www\learnhub\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\learnhub\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\learnhub\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\laragon\www\learnhub\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-12-06 16:13:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tb_kelas.kelas' in 'field list'
+[Method: GET, Route: admin/mapel]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\MapelController.php(31): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\MapelController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MapelController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 16:13:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tb_kelas.kelas' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\MapelController.php(31): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\MapelController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MapelController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 16:13:50 --> [Caused by] mysqli_sql_exception: Unknown column 'tb_kelas.kelas' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\MapelController.php(31): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\MapelController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MapelController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-06 16:16:37 --> mysqli_sql_exception: Unknown column 'tb_kelas.kelas' in 'field list' in D:\laragon\www\learnhub\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\laragon\www\learnhub\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tb_mape...', 0)
+#1 D:\laragon\www\learnhub\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_mape...')
+#2 D:\laragon\www\learnhub\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_mape...')
+#3 D:\laragon\www\learnhub\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_mape...', Array, false)
+#4 D:\laragon\www\learnhub\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\laragon\www\learnhub\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\laragon\www\learnhub\app\Controllers\Admin\MapelController.php(34): CodeIgniter\BaseModel->findAll()
+#7 D:\laragon\www\learnhub\system\CodeIgniter.php(933): App\Controllers\Admin\MapelController->index()
+#8 D:\laragon\www\learnhub\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MapelController))
+#9 D:\laragon\www\learnhub\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\learnhub\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\learnhub\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\laragon\www\learnhub\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-12-06 16:16:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tb_kelas.kelas' in 'field list'
+[Method: GET, Route: admin/mapel]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\MapelController.php(34): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\MapelController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MapelController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 16:16:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tb_kelas.kelas' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\MapelController.php(34): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\MapelController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MapelController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 16:16:37 --> [Caused by] mysqli_sql_exception: Unknown column 'tb_kelas.kelas' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\MapelController.php(34): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\MapelController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MapelController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-06 16:16:47 --> mysqli_sql_exception: Unknown column 'tb_kelas.kelas' in 'field list' in D:\laragon\www\learnhub\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\laragon\www\learnhub\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tb_mape...', 0)
+#1 D:\laragon\www\learnhub\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_mape...')
+#2 D:\laragon\www\learnhub\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_mape...')
+#3 D:\laragon\www\learnhub\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_mape...', Array, false)
+#4 D:\laragon\www\learnhub\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\laragon\www\learnhub\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\laragon\www\learnhub\app\Controllers\Admin\MapelController.php(34): CodeIgniter\BaseModel->findAll()
+#7 D:\laragon\www\learnhub\system\CodeIgniter.php(933): App\Controllers\Admin\MapelController->index()
+#8 D:\laragon\www\learnhub\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MapelController))
+#9 D:\laragon\www\learnhub\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\learnhub\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\learnhub\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\laragon\www\learnhub\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-12-06 16:16:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tb_kelas.kelas' in 'field list'
+[Method: GET, Route: admin/mapel]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\MapelController.php(34): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\MapelController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MapelController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 16:16:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tb_kelas.kelas' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\MapelController.php(34): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\MapelController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MapelController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 16:16:47 --> [Caused by] mysqli_sql_exception: Unknown column 'tb_kelas.kelas' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_mapel`.*, `tb_guru`.`nama_guru`, `tb_kelas`.`kelas`
+FROM `tb_mapel`
+JOIN `tb_guru` ON `tb_guru`.`id_guru` = `tb_mapel`.`id_guru`
+JOIN `tb_kelas` ON `tb_kelas`.`id_kelas` = `tb_mapel`.`id_kelas`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\MapelController.php(34): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\MapelController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MapelController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 16:18:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "v_template_admin/mapel/v_index.php"
+[Method: GET, Route: admin/mapel]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_template_admin/mapel/v_index.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin/mapel/v_index', [], true)
+ 3 APPPATH\Views\v_template_admin.php(195): view('v_template_admin/mapel/v_index')
+ 4 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 7 APPPATH\Controllers\Admin\MapelController.php(37): view('v_template_admin', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\MapelController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MapelController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 16:19:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard_admin/mapel/v_index.php"
+[Method: GET, Route: admin/mapel]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard_admin/mapel/v_index.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_admin/mapel/v_index', [], true)
+ 3 APPPATH\Views\v_template_admin.php(195): view('dashboard_admin/mapel/v_index')
+ 4 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 7 APPPATH\Controllers\Admin\MapelController.php(37): view('v_template_admin', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\MapelController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MapelController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 16:19:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard_admin/mapel/v_index.php"
+[Method: GET, Route: admin/mapel]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard_admin/mapel/v_index.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_admin/mapel/v_index', [], true)
+ 3 APPPATH\Views\v_template_admin.php(195): view('dashboard_admin/mapel/v_index')
+ 4 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 7 APPPATH\Controllers\Admin\MapelController.php(37): view('v_template_admin', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\MapelController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MapelController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 16:34:32 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: admin/mapel/insertdata]
+in SYSTEMPATH\BaseModel.php on line 824.
+ 1 SYSTEMPATH\BaseModel.php(824): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Admin\MapelController.php(65): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\MapelController->InsertData()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MapelController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 16:35:41 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: admin/mapel/insertdata]
+in SYSTEMPATH\BaseModel.php on line 824.
+ 1 SYSTEMPATH\BaseModel.php(824): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Admin\MapelController.php(65): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\MapelController->InsertData()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MapelController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 17:01:01 --> ErrorException: Attempt to read property "errno" on false
+[Method: POST, Route: admin/mapel/update/1]
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 610.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(610): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "errno" on false', 'D:\\laragon\\www\\learnhub\\system\\Database\\MySQLi\\Connection.php', 610)
+ 2 SYSTEMPATH\Model.php(575): CodeIgniter\Database\MySQLi\Connection->error()
+ 3 SYSTEMPATH\BaseModel.php(1243): CodeIgniter\Model->doErrors()
+ 4 APPPATH\Controllers\Admin\MapelController.php(102): CodeIgniter\BaseModel->errors()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\MapelController->UpdateData('1')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MapelController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -61,4 +61,36 @@ class ModelMapel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    public function getMapelWithGuru()
+    {
+        return $this->select('tb_mapel.*, tb_guru.nama_guru')
+                    ->join('tb_guru', 'tb_guru.id_guru = tb_mapel.id_guru')
+                    ->findAll();
+    }
+
+    // Relasi satu data
+    public function getDetailGuru($id_guru)
+    {
+        return $this->select('tb_mapel.*, tb_guru.nama_guru')
+                    ->join('tb_guru', 'tb_guru.id_guru = tb_mapel.id_guru')
+                    ->where('tb_mapel.id_guru', $id_guru)
+                    ->first();
+    }
+
+    public function getMapelWithKelas()
+    {
+        return $this->select('tb_mapel.*, tb_kelas.nama_kelas')
+                    ->join('tb_kelas', 'tb_kelas.id_kelas = tb_mapel.id_kelas')
+                    ->findAll();
+    }
+
+    // Relasi satu data
+    public function getDetailKelas($id_kelas)
+    {
+        return $this->select('tb_mapel.*, tb_kelas.nama_kelas')
+                    ->join('tb_kelas', 'tb_kelas.id_kelas = tb_mapel.id_kelas')
+                    ->where('tb_mapel.id_kelas', $id_kelas)
+                    ->first();
+    }
 }

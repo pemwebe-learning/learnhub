@@ -83,7 +83,16 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->get('pengumuman/edit/(:num)', 'PengumumanController::edit/$1');
     $routes->post('pengumuman/update/(:num)', 'PengumumanController::UpdateData/$1');
     $routes->get('pengumuman/delete/(:num)', 'PengumumanController::DeleteData/$1');
-    $routes->get('pengumuman/detail/(:num)', 'PengumumanController::DetailData/$1');
+    
+
+    //mapel
+    $routes->get('mapel', 'MapelController::index');
+    $routes->get('mapel/input', 'MapelController::input');
+    $routes->post('mapel/insertdata', 'MapelController::InsertData');
+    $routes->get('mapel/edit/(:num)', 'MapelController::edit/$1');
+    $routes->post('mapel/update/(:num)', 'MapelController::UpdateData/$1');
+    $routes->get('mapel/delete/(:num)', 'MapelController::DeleteData/$1');
+    
 });
 
 

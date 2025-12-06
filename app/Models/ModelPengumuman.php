@@ -61,19 +61,5 @@ class ModelPengumuman extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function getMapelWithKelas()
-    {
-        return $this->select('tb_kelas.*, tb_tingkat.tingkat')
-                    ->join('tb_tingkat', 'tb_tingkat.id_tingkat = tb_kelas.id_tingkat')
-                    ->findAll();
-    }
-
-    // Relasi satu data
-    public function getDetailTingkat($id)
-    {
-        return $this->select('tb_kelas.*, tb_tingkat.tingkat')
-                    ->join('tb_tingkat', 'tb_tingkat.id_tingkat = tb_kelas.id_tingkat')
-                    ->where('tb_kelas.id_kelas', $id)
-                    ->first();
-    }
+    
 }
