@@ -86,7 +86,7 @@ class GuruController extends BaseController
 
      public function edit ($id_guru) {
         $data = [
-            'judul' => 'Edit Admin',
+            'judul' => 'Edit Guru',
             'menu' => 'edit_guru',
             'page' => 'dashboard_admin/guru/v_edit',
             'guru' => $this->ModelGuru->find($id_guru),

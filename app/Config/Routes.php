@@ -74,6 +74,16 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->post('siswa/update/(:num)', 'SiswaController::UpdateData/$1');
     $routes->get('siswa/delete/(:num)', 'SiswaController::DeleteData/$1');
     $routes->get('siswa/detail/(:num)', 'SiswaController::DetailData/$1');
+
+
+    //pengumuman
+    $routes->get('pengumuman', 'PengumumanController::index');
+    $routes->get('pengumuman/input', 'PengumumanController::input');
+    $routes->post('pengumuman/insertdata', 'PengumumanController::InsertData');
+    $routes->get('pengumuman/edit/(:num)', 'PengumumanController::edit/$1');
+    $routes->post('pengumuman/update/(:num)', 'PengumumanController::UpdateData/$1');
+    $routes->get('pengumuman/delete/(:num)', 'PengumumanController::DeleteData/$1');
+    $routes->get('pengumuman/detail/(:num)', 'PengumumanController::DetailData/$1');
 });
 
 

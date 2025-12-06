@@ -50,7 +50,7 @@
                 </tr>
             <?php endforeach; ?>
         <?php else: ?>
-            <tr><td colspan="7" class="text-center text-muted">Belum ada data admin.</td></tr>
+            <tr><td colspan="7" class="text-center text-muted">Belum ada data siswa.</td></tr>
         <?php endif; ?>
             </tbody>
           </table>

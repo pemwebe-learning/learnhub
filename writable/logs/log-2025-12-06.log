@@ -1,0 +1,258 @@
+ERROR - 2025-12-06 12:18:33 --> mysqli_sql_exception: Table 'db-learhub.modelpengumumen' doesn't exist in D:\laragon\www\learnhub\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\laragon\www\learnhub\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\laragon\www\learnhub\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\laragon\www\learnhub\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\laragon\www\learnhub\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\laragon\www\learnhub\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\laragon\www\learnhub\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\laragon\www\learnhub\app\Controllers\Admin\PengumumanController.php(24): CodeIgniter\BaseModel->findAll()
+#7 D:\laragon\www\learnhub\system\CodeIgniter.php(933): App\Controllers\Admin\PengumumanController->index()
+#8 D:\laragon\www\learnhub\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PengumumanController))
+#9 D:\laragon\www\learnhub\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\learnhub\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\learnhub\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\laragon\www\learnhub\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-12-06 12:18:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db-learhub.modelpengumumen' doesn't exist
+[Method: GET, Route: admin/pengumuman]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `modelpengumumen`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\PengumumanController.php(24): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PengumumanController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PengumumanController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 12:18:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db-learhub.modelpengumumen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `modelpengumumen`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `modelpengumumen`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `modelpengumumen`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\PengumumanController.php(24): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PengumumanController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PengumumanController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 12:18:34 --> [Caused by] mysqli_sql_exception: Table 'db-learhub.modelpengumumen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `modelpengumumen`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `modelpengumumen`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `modelpengumumen`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `modelpengumumen`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\PengumumanController.php(24): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PengumumanController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PengumumanController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 12:48:51 --> ErrorException: Undefined array key "id_pengumuman"
+[Method: GET, Route: admin/pengumuman/input]
+in APPPATH\Views\dashboard_admin\pengumuman\v_input.php on line 13.
+ 1 APPPATH\Views\dashboard_admin\pengumuman\v_input.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pengumuman"', 'D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\pengumuman\\v_input.php', 13)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\pengumuman\\v_input.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_admin/pengumuman/v_input', [], true)
+ 5 APPPATH\Views\v_template_admin.php(187): view('dashboard_admin/pengumuman/v_input')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 9 APPPATH\Controllers\Admin\PengumumanController.php(37): view('v_template_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PengumumanController->input()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PengumumanController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 12:55:51 --> CodeIgniter\Validation\Exceptions\ValidationException: "required|min_length" is not a valid rule.
+[Method: POST, Route: admin/pengumuman/insertdata]
+in SYSTEMPATH\Validation\Validation.php on line 345.
+ 1 SYSTEMPATH\Validation\Validation.php(345): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('required|min_length')
+ 2 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('judul_pengumuman', 'judul_pengumuman', 'Besok libur', [...], [...], 'judul_pengumuman')
+ 3 SYSTEMPATH\BaseModel.php(1570): CodeIgniter\Validation\Validation->run([...], null, null)
+ 4 SYSTEMPATH\BaseModel.php(807): CodeIgniter\BaseModel->validate([...])
+ 5 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 6 APPPATH\Controllers\Admin\PengumumanController.php(47): CodeIgniter\Model->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PengumumanController->InsertData()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PengumumanController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 12:56:52 --> CodeIgniter\Validation\Exceptions\ValidationException: "required|min_length" is not a valid rule.
+[Method: POST, Route: admin/pengumuman/insertdata]
+in SYSTEMPATH\Validation\Validation.php on line 345.
+ 1 SYSTEMPATH\Validation\Validation.php(345): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('required|min_length')
+ 2 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('judul_pengumuman', 'judul_pengumuman', 'Besok libur', [...], [...], 'judul_pengumuman')
+ 3 SYSTEMPATH\BaseModel.php(1570): CodeIgniter\Validation\Validation->run([...], null, null)
+ 4 SYSTEMPATH\BaseModel.php(807): CodeIgniter\BaseModel->validate([...])
+ 5 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 6 APPPATH\Controllers\Admin\PengumumanController.php(47): CodeIgniter\Model->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PengumumanController->InsertData()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PengumumanController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 13:06:45 --> ErrorException: Undefined variable $kelas
+[Method: GET, Route: admin/pengumuman/edit/1]
+in APPPATH\Views\dashboard_admin\kelas\v_edit.php on line 13.
+ 1 APPPATH\Views\dashboard_admin\kelas\v_edit.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kelas', 'D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_edit.php', 13)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_admin/kelas/v_edit', [], true)
+ 5 APPPATH\Views\v_template_admin.php(187): view('dashboard_admin/kelas/v_edit')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 9 APPPATH\Controllers\Admin\PengumumanController.php(64): view('v_template_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PengumumanController->edit('1')
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PengumumanController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 13:07:48 --> ErrorException: Undefined variable $kelas
+[Method: GET, Route: admin/pengumuman/edit/1]
+in APPPATH\Views\dashboard_admin\kelas\v_edit.php on line 13.
+ 1 APPPATH\Views\dashboard_admin\kelas\v_edit.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kelas', 'D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_edit.php', 13)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_admin/kelas/v_edit', [], true)
+ 5 APPPATH\Views\v_template_admin.php(187): view('dashboard_admin/kelas/v_edit')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 9 APPPATH\Controllers\Admin\PengumumanController.php(64): view('v_template_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PengumumanController->edit('1')
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PengumumanController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 13:09:14 --> ErrorException: Undefined variable $kelas
+[Method: GET, Route: admin/pengumuman/edit/1]
+in APPPATH\Views\dashboard_admin\kelas\v_edit.php on line 13.
+ 1 APPPATH\Views\dashboard_admin\kelas\v_edit.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kelas', 'D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_edit.php', 13)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_admin/kelas/v_edit', [], true)
+ 5 APPPATH\Views\v_template_admin.php(187): view('dashboard_admin/kelas/v_edit')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 9 APPPATH\Controllers\Admin\PengumumanController.php(64): view('v_template_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PengumumanController->edit('1')
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PengumumanController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 13:09:19 --> ErrorException: Undefined variable $kelas
+[Method: GET, Route: admin/pengumuman/edit/1]
+in APPPATH\Views\dashboard_admin\kelas\v_edit.php on line 13.
+ 1 APPPATH\Views\dashboard_admin\kelas\v_edit.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kelas', 'D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_edit.php', 13)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_admin/kelas/v_edit', [], true)
+ 5 APPPATH\Views\v_template_admin.php(187): view('dashboard_admin/kelas/v_edit')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 9 APPPATH\Controllers\Admin\PengumumanController.php(64): view('v_template_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PengumumanController->edit('1')
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PengumumanController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 13:10:57 --> ErrorException: Undefined variable $kelas
+[Method: GET, Route: admin/pengumuman/edit/1]
+in APPPATH\Views\dashboard_admin\kelas\v_edit.php on line 13.
+ 1 APPPATH\Views\dashboard_admin\kelas\v_edit.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kelas', 'D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_edit.php', 13)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_admin/kelas/v_edit', [], true)
+ 5 APPPATH\Views\v_template_admin.php(187): view('dashboard_admin/kelas/v_edit')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 9 APPPATH\Controllers\Admin\PengumumanController.php(64): view('v_template_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PengumumanController->edit('1')
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PengumumanController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 13:13:26 --> ErrorException: Undefined variable $kelas
+[Method: GET, Route: admin/pengumuman/edit/1]
+in APPPATH\Views\dashboard_admin\kelas\v_edit.php on line 13.
+ 1 APPPATH\Views\dashboard_admin\kelas\v_edit.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kelas', 'D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_edit.php', 13)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\kelas\\v_edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_admin/kelas/v_edit', [], true)
+ 5 APPPATH\Views\v_template_admin.php(187): view('dashboard_admin/kelas/v_edit')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 9 APPPATH\Controllers\Admin\PengumumanController.php(64): view('v_template_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PengumumanController->edit('1')
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PengumumanController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 13:14:07 --> ErrorException: Undefined array key "id_pengumuman"
+[Method: GET, Route: admin/pengumuman/edit/1]
+in APPPATH\Views\dashboard_admin\pengumuman\v_edit.php on line 13.
+ 1 APPPATH\Views\dashboard_admin\pengumuman\v_edit.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pengumuman"', 'D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\pengumuman\\v_edit.php', 13)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\pengumuman\\v_edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_admin/pengumuman/v_edit', [], true)
+ 5 APPPATH\Views\v_template_admin.php(187): view('dashboard_admin/pengumuman/v_edit')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 9 APPPATH\Controllers\Admin\PengumumanController.php(64): view('v_template_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PengumumanController->edit('1')
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PengumumanController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-06 13:14:12 --> ErrorException: Undefined array key "id_pengumuman"
+[Method: GET, Route: admin/pengumuman/edit/1]
+in APPPATH\Views\dashboard_admin\pengumuman\v_edit.php on line 13.
+ 1 APPPATH\Views\dashboard_admin\pengumuman\v_edit.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pengumuman"', 'D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\pengumuman\\v_edit.php', 13)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_admin\\pengumuman\\v_edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_admin/pengumuman/v_edit', [], true)
+ 5 APPPATH\Views\v_template_admin.php(187): view('dashboard_admin/pengumuman/v_edit')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_admin.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 9 APPPATH\Controllers\Admin\PengumumanController.php(64): view('v_template_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PengumumanController->edit('1')
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PengumumanController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

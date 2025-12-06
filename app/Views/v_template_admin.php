@@ -140,7 +140,23 @@
                 Kelas
               </p>
             </a>
-          </li>                           
+          </li>
+          <li class="nav-item menu-open">
+            <a href="<?= base_url('admin/pengumuman') ?>" class="nav-link <?= $menu =='pengumuman' ? 'active' : '' ?>">
+              <i class="fa-solid fa-landmark"></i>
+              <p>
+                Pengumuman
+              </p>
+            </a>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="<?= base_url('admin/mapel') ?>" class="nav-link <?= $menu =='mapel' ? 'active' : '' ?>">
+              <i class="fa-solid fa-landmark"></i>
+              <p>
+                Mapel
+              </p>
+            </a>
+          </li>                              
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
