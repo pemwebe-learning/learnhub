@@ -39,37 +39,10 @@
     </ul>
 
     <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
+    <ul class="navbar-nav ml-auto">  
       <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-          <i class="fas fa-search"></i>
-        </a>
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
+        <a class="nav-link" href="<?= base_url('logout_guru') ?>">
+          <i class="fas fa-sign-out-alt"></i> Log Out
         </a>
       </li>
     </ul>
@@ -89,10 +62,12 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="<?= base_url('AdminLTE') ?>/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
+          <img src="<?= base_url('uploads/admin/' . session()->get('foto')) ?>" 
+          class="img-circle elevation-2" alt="User Image">
+      </div>
+
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block"><?= session()->get('nama_admin') ?></a>
         </div>
       </div>
       
@@ -102,7 +77,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="<?= base_url('admin/') ?>" class="nav-link <?= $menu =='dashboard_admin' ? 'active' : '' ?>">
+            <a href="<?= base_url('admin/dashboard') ?>" class="nav-link <?= $menu =='dashboard_admin' ? 'active' : '' ?>">
               <i class="fa-solid fa-grip"></i>
               <p>
                 Dashboard

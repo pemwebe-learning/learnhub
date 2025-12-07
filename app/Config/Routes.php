@@ -9,6 +9,7 @@ $routes->get('/', 'Home::index');
 //login admin
 $routes->get('login_admin', 'LoginAdmin::index');
 $routes->post('proses_login_admin', 'LoginAdmin::prosesLoginAdmin');
+$routes->get('logout_admin', 'LoginAdmin::logout');
 //login guru
 $routes->get('login_guru', 'LoginGuru::index');
 $routes->post('proses_login_guru', 'LoginGuru::prosesLoginGuru');

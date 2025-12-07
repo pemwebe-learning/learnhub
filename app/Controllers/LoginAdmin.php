@@ -54,6 +54,10 @@ class LoginAdmin extends BaseController
             'id_user'   => $user['id_admin'],
             'nama_admin'      => $user['nama_admin'],
             'email'     => $user['email'],
+            'foto'=> $user['foto'],
+            'jenis_kelamin' => $user['jenis_kelamin'],
+            'alamat' => $user['alamat'],
+            'no_hp' => $user['no_hp'],
             'logged_in' => true
         ]);
 
@@ -63,6 +67,6 @@ class LoginAdmin extends BaseController
     public function logout()
     {
         session()->destroy();
-        return redirect()->to('/login')->with('success', 'Berhasil logout.');
+        return redirect()->to('/')->with('success', 'Berhasil logout.');
     }
 }

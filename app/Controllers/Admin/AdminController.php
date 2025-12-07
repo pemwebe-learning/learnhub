@@ -15,6 +15,7 @@ class AdminController extends BaseController
             'judul' => 'Dashboard Admin',
             'menu' => 'dashboard_admin',
             'page' => 'dashboard_admin/v_dashboard_admin',
+            'session_admin' => session()
             
         ];
         return view('v_template_admin', $data);
