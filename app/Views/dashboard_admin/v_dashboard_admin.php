@@ -43,7 +43,7 @@
                         </tr>
                     </table>
 
-                    <a href="<?= base_url('admin/user') ?>" class="btn btn-success btn-flat">
+                    <a href="<?= base_url('admin/user/edit/'. session()->get('id_admin')) ?>" class="btn btn-success btn-flat">
                       <i class="fas-fa-edit"></i>Edit Profile</a>
                 </div>
             </div>

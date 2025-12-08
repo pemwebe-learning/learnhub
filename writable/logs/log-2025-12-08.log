@@ -1,0 +1,99 @@
+CRITICAL - 2025-12-08 09:06:25 --> ArgumentCountError: Too few arguments to function App\Controllers\Guru\GuruController::edit(), 0 passed in D:\laragon\www\learnhub\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: guru/edit/5]
+in APPPATH\Controllers\Guru\GuruController.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\GuruController->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\GuruController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-08 09:15:53 --> ArgumentCountError: Too few arguments to function App\Controllers\Guru\GuruController::edit(), 0 passed in D:\laragon\www\learnhub\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: guru/edit/5]
+in APPPATH\Controllers\Guru\GuruController.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\GuruController->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\GuruController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-08 09:16:02 --> ArgumentCountError: Too few arguments to function App\Controllers\Guru\GuruController::edit(), 0 passed in D:\laragon\www\learnhub\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: guru/edit/5]
+in APPPATH\Controllers\Guru\GuruController.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\GuruController->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\GuruController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-08 09:20:03 --> ArgumentCountError: Too few arguments to function App\Controllers\Guru\GuruController::edit(), 0 passed in D:\laragon\www\learnhub\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: guru/edit/5]
+in APPPATH\Controllers\Guru\GuruController.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\GuruController->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\GuruController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-08 09:20:44 --> ArgumentCountError: Too few arguments to function App\Controllers\Guru\GuruController::edit(), 0 passed in D:\laragon\www\learnhub\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: guru/edit/5]
+in APPPATH\Controllers\Guru\GuruController.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\GuruController->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\GuruController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-08 09:24:30 --> ArgumentCountError: Too few arguments to function App\Controllers\Guru\GuruController::edit(), 0 passed in D:\laragon\www\learnhub\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: guru/edit/5]
+in APPPATH\Controllers\Guru\GuruController.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\GuruController->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\GuruController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-08 09:26:53 --> ArgumentCountError: Too few arguments to function App\Controllers\Guru\GuruController::edit(), 0 passed in D:\laragon\www\learnhub\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: guru/edit/5]
+in APPPATH\Controllers\Guru\GuruController.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\GuruController->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\GuruController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-08 09:27:07 --> ArgumentCountError: Too few arguments to function App\Controllers\Guru\GuruController::edit(), 0 passed in D:\laragon\www\learnhub\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: guru/edit/5]
+in APPPATH\Controllers\Guru\GuruController.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\GuruController->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\GuruController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-08 09:28:13 --> ArgumentCountError: Too few arguments to function App\Controllers\Guru\GuruController::edit(), 0 passed in D:\laragon\www\learnhub\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: guru/edit/5]
+in APPPATH\Controllers\Guru\GuruController.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\GuruController->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\GuruController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-08 09:28:15 --> ArgumentCountError: Too few arguments to function App\Controllers\Guru\GuruController::edit(), 0 passed in D:\laragon\www\learnhub\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: guru/edit/5]
+in APPPATH\Controllers\Guru\GuruController.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\GuruController->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\GuruController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-08 09:28:28 --> ArgumentCountError: Too few arguments to function App\Controllers\Guru\GuruController::edit(), 0 passed in D:\laragon\www\learnhub\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: guru/edit/5]
+in APPPATH\Controllers\Guru\GuruController.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\GuruController->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\GuruController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -1,60 +1,52 @@
+<div class="col-md-12">
+    <div class="card card-outline card-primary">
+        <div class="card-header">
+            <h1 class="card-title">SELAMAT DATANG <?= session()->get('nama_guru') ?></h1>
+        </div>
 
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box">
-              <span class="info-box-icon bg-info elevation-1"><i class="fa-solid fa-user-tie"></i></span>
+        <div class="card-body">
+            <div class="row">
 
-              <div class="info-box-content">
-                <span class="info-box-text">Guru</span>
-                <span class="info-box-number">
-                  10
-                  <small>%</small>
-                </span>
-              </div>
-              <!-- /.info-box-content -->
+                <!-- FOTO DI TENGAH + JARAK -->
+                <div class="col-sm-12 text-center mb-4">
+                    <img src="<?= base_url('uploads/guru/' . session()->get('foto')) ?>" 
+                         width="200px" class="img-thumbnail">
+                </div>
+
+                <!-- TABEL -->
+                <div class="col-sm-12">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Nama Admin</th>
+                            <th width="30px">:</th>
+                            <td><?= session()->get('nama_guru') ?></td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <th>:</th>
+                            <td><?= session()->get('email') ?></td>
+                        </tr>
+                        <tr>
+                            <th>Alamat Rumah</th>
+                            <th>:</th>
+                            <td><?= session()->get('alamat') ?></td>
+                        </tr>
+                        <tr>
+                            <th>Jenis Kelamin</th>
+                            <th>:</th>
+                            <td><?= session()->get('jenis_kelamin') ?></td>
+                        </tr>
+                        <tr>
+                            <th>Nomor HP</th>
+                            <th>:</th>
+                            <td><?= session()->get('no_hp') ?></td>
+                        </tr>
+                    </table>
+
+                    <a href="<?= base_url('guru/edit/'. session()->get('id_guru')) ?>" class="btn btn-success btn-flat">
+                      <i class="fas-fa-edit"></i>Edit Profile</a>
+                </div>
             </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-danger elevation-1"><i class="fa-solid fa-user-gear"> </i></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text">Admin</span>
-                <span class="info-box-number">41,410</span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-
-          <!-- fix for small devices only -->
-          <div class="clearfix hidden-md-up"></div>
-
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-success elevation-1"><i class="fa-solid fa-user"> </i></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text">Siswa</span>
-                <span class="info-box-number">760</span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-warning elevation-1"><i class="fa-solid fa-landmark"></i></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text">Jumlah Kelas</span>
-                <span class="info-box-number">2,000</span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
+        </div>
+    </div>
+</div>

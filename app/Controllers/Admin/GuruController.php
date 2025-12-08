@@ -133,7 +133,7 @@ class GuruController extends BaseController
 
         // Data utama
         $data = [
-            'nama_admin'    => $this->request->getPost('nama_admin'),
+            'nama_guru'    => $this->request->getPost('nama_guru'),
             'email'         => $this->request->getPost('email'),
             'alamat'        => $this->request->getPost('alamat'),
             'no_hp'         => $this->request->getPost('no_hp'),
@@ -171,7 +171,7 @@ class GuruController extends BaseController
         if ($fotoBaru) {
 
             // Hapus foto lama
-            if (!empty($admin['foto']) && file_exists('uploads/admin/' . $guru['foto'])) {
+            if (!empty($guru['foto']) && file_exists('uploads/guru/' . $guru['foto'])) {
                 unlink('uploads/guru/' . $guru['foto']);
             }
 

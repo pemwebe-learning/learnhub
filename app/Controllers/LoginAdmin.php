@@ -51,7 +51,7 @@ class LoginAdmin extends BaseController
 
         // Simpan data ke session
         session()->set([
-            'id_user'   => $user['id_admin'],
+            'id_admin'   => $user['id_admin'],
             'nama_admin'      => $user['nama_admin'],
             'email'     => $user['email'],
             'foto'=> $user['foto'],

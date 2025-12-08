@@ -13,6 +13,7 @@ $routes->get('logout_admin', 'LoginAdmin::logout');
 //login guru
 $routes->get('login_guru', 'LoginGuru::index');
 $routes->post('proses_login_guru', 'LoginGuru::prosesLoginGuru');
+$routes->get('logout_guru', 'LoginGuru::logout');
 
 // ROUTING ADMIN
 $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
@@ -36,26 +37,6 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->get('kelas/edit/(:num)', 'KelasController::edit/$1');
     $routes->post('kelas/update/(:num)', 'KelasController::UpdateData/$1');
     $routes->get('kelas/delete/(:num)', 'KelasController::delete/$1');
-
-    // 📚 Mapel Management
-    $routes->get('mapel', 'MapelController::index');
-    // $routes->get('mapel/create', 'MapelController::create');
-    // $routes->post('mapel/store', 'MapelController::store');
-    // $routes->get('mapel/edit/(:num)', 'MapelController::edit/$1');
-    // $routes->post('mapel/update/(:num)', 'MapelController::update/$1');
-    // $routes->get('mapel/delete/(:num)', 'MapelController::delete/$1');
-
-    // 📢 Pengumuman
-    // $routes->get('pengumuman', 'PengumumanController::index');
-    // $routes->get('pengumuman/create', 'PengumumanController::create');
-    // $routes->post('pengumuman/store', 'PengumumanController::store');
-    // $routes->get('pengumuman/edit/(:num)', 'PengumumanController::edit/$1');
-    // $routes->post('pengumuman/update/(:num)', 'PengumumanController::update/$1');
-    // $routes->get('pengumuman/delete/(:num)', 'PengumumanController::delete/$1');
-
-    // 📈 Laporan
-    // $routes->get('laporan', 'LaporanController::index');
-    // $routes->get('laporan/download/(:num)', 'LaporanController::download/$1');
 
     //guru
     $routes->get('guru', 'GuruController::index');
@@ -101,6 +82,8 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
 $routes->group('siswa', ['namespace' => 'App\Controllers\Siswa'], function ($routes) {
     // Dashboard
     $routes->get('dashboard', 'SiswaController::index');
+    $routes->get('edit/', 'GuruController::edit/$1');
+    
 
     //materi
     $routes->get('materi', 'MateriController::index');
@@ -121,6 +104,8 @@ $routes->group('siswa', ['namespace' => 'App\Controllers\Siswa'], function ($rou
 $routes->group('guru', ['namespace' => 'App\Controllers\Guru'], function ($routes) {
     // Dashboard
     $routes->get('dashboard', 'GuruController::index');
+    $routes->get('edit/(:num)', 'GuruController::edit/$1');
+    $routes->post('update/(:num)', 'GuruController::UpdateData/$1');
 
     //kelas
     $routes->get('kelas', 'KelasController::index');

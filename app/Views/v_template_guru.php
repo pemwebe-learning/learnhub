@@ -42,34 +42,8 @@
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
       <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-          <i class="fas fa-search"></i>
-        </a>
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
+        <a class="nav-link" href="<?= base_url('logout_guru') ?>">
+          <i class="fas fa-sign-out-alt"></i> Log Out
         </a>
       </li>
     </ul>
@@ -89,12 +63,13 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="<?= base_url('AdminLTE') ?>/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
-        </div>
+          <img src="<?= base_url('uploads/guru/' . session()->get('foto')) ?>" 
+          class="img-circle elevation-2" alt="User Image">
       </div>
+      <div class="info">
+        <a href="#" class="d-block"><?= session()->get('nama_guru') ?></a>
+      </div>
+    </div>
       
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -102,7 +77,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="<?= base_url('guru/') ?>" class="nav-link <?= $menu =='dashboard_guru' ? 'active' : '' ?>">
+            <a href="<?= base_url('guru/dashboard') ?>" class="nav-link <?= $menu =='dashboard_guru' ? 'active' : '' ?>">
               <i class="fa-solid fa-grip"></i>
               <p>
                 Dashboard
@@ -110,21 +85,13 @@
             </a>
           </li>
           <li class="nav-item menu-open">
-            <a href="<?= base_url('guru/materi') ?>" class="nav-link <?= $menu =='materi' ? 'active' : '' ?>">
-              <i class="fa-solid fa-user-gear"> </i>
+            <a href="<?= base_url('guru/mapel') ?>" class="nav-link <?= $menu =='mapel' ? 'active' : '' ?>">
+              <i class="fa-solid fa-landmark"></i>
               <p>
-                Materi
+                Mapel
               </p>
             </a>
-          </li>
-          <li class="nav-item menu-open">
-            <a href="<?= base_url('guru/tugas') ?>" class="nav-link <?= $menu =='tugas' ? 'active' : '' ?>">
-              <i class="fa-solid fa-user-tie"></i>
-              <p>
-                Tugas
-              </p>
-            </a>
-          </li>
+          </li>   
           <li class="nav-item menu-open">
             <a href="<?= base_url('guru/nilai') ?>" class="nav-link <?= $menu =='nilai' ? 'active' : '' ?>">
               <i class="fa-solid fa-user"></i>
@@ -132,7 +99,7 @@
                 Nilai
               </p>
             </a>
-          </li>
+          </li> 
           <li class="nav-item menu-open">
             <a href="<?= base_url('guru/pengumuman') ?>" class="nav-link <?= $menu =='pengumuman' ? 'active' : '' ?>">
               <i class="fa-solid fa-landmark"></i>
@@ -140,23 +107,7 @@
                 Pengumuman
               </p>
             </a>
-          </li>
-          <li class="nav-item menu-open">
-            <a href="<?= base_url('guru/siswa') ?>" class="nav-link <?= $menu =='siswa' ? 'active' : '' ?>">
-              <i class="fa-solid fa-landmark"></i>
-              <p>
-                Siswa
-              </p>
-            </a>
-          </li> 
-          <li class="nav-item menu-open">
-            <a href="<?= base_url('guru/mapel') ?>" class="nav-link <?= $menu =='mapel' ? 'active' : '' ?>">
-              <i class="fa-solid fa-landmark"></i>
-              <p>
-                Mapel
-              </p>
-            </a>
-          </li>                          
+          </li>                      
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

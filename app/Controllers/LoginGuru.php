@@ -53,9 +53,13 @@ class LoginGuru extends BaseController
 
         // Simpan data ke session
         session()->set([
-            'id_user'   => $user['id_guru'],
-            'nama_admin'  => $user['nama_guru'],
+            'id_guru'   => $user['id_guru'],
+            'nama_guru'  => $user['nama_guru'],
             'email'     => $user['email'],
+            'foto'=> $user['foto'],
+            'jenis_kelamin' => $user['jenis_kelamin'],
+            'alamat' => $user['alamat'],
+            'no_hp' => $user['no_hp'],
             'logged_in' => true
         ]);
 
@@ -65,6 +69,6 @@ class LoginGuru extends BaseController
     public function logout()
     {
         session()->destroy();
-        return redirect()->to('/login')->with('success', 'Berhasil logout.');
+        return redirect()->to('/')->with('success', 'Berhasil logout.');
     }
 }

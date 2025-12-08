@@ -10,13 +10,13 @@
               session();
               $validation = \Config\Services::validation();
               ?>
-              <?php echo form_open_multipart('admin/guru/update/'. $guru['id_guru']) ?>
+              <?php echo form_open_multipart('guru/update/'. session()->get('id_guru')) ?>
 
                <div class="row">
                   <div class="col-sm-3">
                   <div class="form-group">
                     <label>Email</label>
-                    <input type="text" name="email" value="<?= $guru['email'] ?>" placeholder="email" class="form-control <?= isset(session('errors')['email']) ? 'is-invalid' : '' ?>">
+                    <input type="text" name="email" value="<?= $detail_guru['email'] ?>" placeholder="email" class="form-control <?= isset(session('errors')['email']) ? 'is-invalid' : '' ?>">
                     <div class="invalid-feedback">
                         <?= session('errors')['email'] ?? '' ?>
                     </div>
@@ -37,7 +37,7 @@
                   <div class="col-sm-3">
                   <div class="form-group">
                     <label>Nama Guru</label>
-                    <input type="text" name="nama_guru" value="<?= $guru['nama_guru'] ?>" placeholder="Nama" class="form-control <?= isset(session('errors')['nama_guru']) ? 'is-invalid' : '' ?>">
+                    <input type="text" name="nama_guru" value="<?= $detail_guru['nama_guru'] ?>" placeholder="Nama" class="form-control <?= isset(session('errors')['nama_guru']) ? 'is-invalid' : '' ?>">
                     <div class="invalid-feedback">
                         <?= session('errors')['nama_guru'] ?? '' ?>
                     </div>
@@ -48,7 +48,7 @@
                   <div class="col-sm-3">
                   <div class="form-group">
                     <label>alamat</label>
-                    <input type="text" name="alamat" value="<?= $guru['alamat'] ?>" placeholder="alamat" class="form-control <?= isset(session('errors')['alamat']) ? 'is-invalid' : '' ?>">
+                    <input type="text" name="alamat" value="<?= $detail_guru['alamat'] ?>" placeholder="alamat" class="form-control <?= isset(session('errors')['alamat']) ? 'is-invalid' : '' ?>">
                     <div class="invalid-feedback">
                         <?= session('errors')['alamat'] ?? '' ?>
                     </div>
@@ -58,7 +58,7 @@
                   <div class="col-sm-3">
                   <div class="form-group">
                     <label>jenis kelamin</label>
-                    <input type="text" name="jenis_kelamin" value="<?= $guru['jenis_kelamin'] ?>" placeholder="jenis kelamin" class="form-control <?= isset(session('errors')['jenis_kelamin']) ? 'is-invalid' : '' ?>">
+                    <input type="text" name="jenis_kelamin" value="<?= $detail_guru['jenis_kelamin'] ?>" placeholder="jenis kelamin" class="form-control <?= isset(session('errors')['jenis_kelamin']) ? 'is-invalid' : '' ?>">
                     <div class="invalid-feedback">
                         <?= session('errors')['jenis_kelamin'] ?? '' ?>
                     </div>
@@ -68,7 +68,7 @@
                   <div class="col-sm-3">
                   <div class="form-group">
                     <label>no hp</label>
-                    <input type="text" name="no_hp" value="<?= $guru['no_hp'] ?>" placeholder="nomor hp" class="form-control <?= isset(session('errors')['no_hp']) ? 'is-invalid' : '' ?>">
+                    <input type="text" name="no_hp" value="<?= $detail_guru['no_hp'] ?>" placeholder="nomor hp" class="form-control <?= isset(session('errors')['no_hp']) ? 'is-invalid' : '' ?>">
                     <div class="invalid-feedback">
                         <?= session('errors')['no_hp'] ?? '' ?>
                     </div>
@@ -81,7 +81,7 @@
                       <div class="form-group">
                         <label>Foto</label>
                         <div>
-                        <img type="image" src="<?= base_url('uploads/guru/'. $guru['foto']) ?>" width="250px">
+                        <img type="image" src="<?= base_url('uploads/guru/'. $detail_guru['foto']) ?>" width="250px">
                         </div>
                         <input type="file" name="foto" class="form-control">
                         <small class="text-muted">Kosongkan jika tidak ingin mengganti foto.</small>
@@ -91,7 +91,7 @@
                   </div>    
                 </div>          
             <button class="btn btn-primary btn-flat" type="submit">Simpan</button>
-            <a href="<?= base_url('admin/guru') ?>"class="btn btn-success btn-flat">Kembali</a>
+            <a href="<?= base_url('guru/dashboard') ?>"class="btn btn-success btn-flat">Kembali</a>
 
               <?php echo form_close() ?>
 
