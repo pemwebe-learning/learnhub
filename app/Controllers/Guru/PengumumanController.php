@@ -24,4 +24,5 @@ class PengumumanController extends BaseController
         ];
         return view('v_template_guru', $data);
     }
+    
 }

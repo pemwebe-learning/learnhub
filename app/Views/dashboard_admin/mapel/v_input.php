@@ -33,7 +33,7 @@
                   </div>
                    <div class="col-sm-4">
                   <div class="form-group">
-                    <label>Kelas</label>
+                    <label>Guru</label>
                     <select class="form-control" name="id_guru" required>
                         <option value="">-- Pilih Guru --</option>
                         <?php foreach ($detail_guru as $row) : ?>

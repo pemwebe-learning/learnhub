@@ -93,4 +93,15 @@ class ModelMapel extends Model
                     ->where('tb_mapel.id_kelas', $id_kelas)
                     ->first();
     }
+
+    public function getMapelByGuru($id_guru)
+    {
+        return $this->select('tb_mapel.*, tb_kelas.nama_kelas, tb_guru.nama_guru')
+                    ->join('tb_kelas', 'tb_kelas.id_kelas = tb_mapel.id_kelas')
+                    ->join('tb_guru', 'tb_guru.id_guru = tb_mapel.id_guru')
+                    ->where('tb_mapel.id_guru', $id_guru)
+                    ->findAll();
+    }
+
+
 }

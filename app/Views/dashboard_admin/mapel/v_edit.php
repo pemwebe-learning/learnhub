@@ -22,7 +22,7 @@
                   </div>
                   <div class="col-sm-4">
                   <div class="form-group">
-                    <label>Tingkat</label>
+                    <label>Guru</label>
                     <select class="form-control" name="id_guru" required>
                         <option value="">-- Pilih Guru --</option>
                         <?php foreach ($detail_guru as $key => $value) { ?>
@@ -33,7 +33,7 @@
                   </div>
                   <div class="col-sm-4">
                   <div class="form-group">
-                    <label>Tingkat</label>
+                    <label>Kelas</label>
                     <select class="form-control" name="id_kelas" required>
                         <option value="">-- Pilih Kelas --</option>
                         <?php foreach ($detail_kelas as $key => $value) { ?>
