@@ -28,7 +28,7 @@
                     <td><?= esc($a['nama_mapel']) ?></td>
                     <td><?= esc($a['nama_kelas']) ?></td>
                     <td>
-                    <a href="<?= base_url('admin/mapel/edit/'. $a['id_mapel']) ?>" class="btn btn-warning btn-sm" title="Edit">
+                    <a href="<?= base_url('guru/materi/'. $a['id_mapel']) ?>" class="btn btn-warning btn-sm" title="Edit">
                       <i class="fas fa-edit"></i>
                     </a>
                     </td>

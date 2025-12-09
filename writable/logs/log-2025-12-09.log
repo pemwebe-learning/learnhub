@@ -1,0 +1,104 @@
+ERROR - 2025-12-09 13:47:04 --> mysqli_sql_exception: Column 'id_mapel' in where clause is ambiguous in D:\laragon\www\learnhub\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\laragon\www\learnhub\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tb_mate...', 0)
+#1 D:\laragon\www\learnhub\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_mate...')
+#2 D:\laragon\www\learnhub\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_mate...')
+#3 D:\laragon\www\learnhub\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_mate...', Array, false)
+#4 D:\laragon\www\learnhub\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\laragon\www\learnhub\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\laragon\www\learnhub\app\Models\ModelMateri.php(69): CodeIgniter\BaseModel->findAll()
+#7 D:\laragon\www\learnhub\app\Controllers\Guru\MateriController.php(26): App\Models\ModelMateri->getMateriWithMapel()
+#8 D:\laragon\www\learnhub\system\CodeIgniter.php(933): App\Controllers\Guru\MateriController->index('3')
+#9 D:\laragon\www\learnhub\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\MateriController))
+#10 D:\laragon\www\learnhub\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\laragon\www\learnhub\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 D:\laragon\www\learnhub\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\laragon\www\learnhub\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-12-09 13:47:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_mapel' in where clause is ambiguous
+[Method: GET, Route: guru/materi/3]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_materi`.*, `tb_mapel`.`nama_mapel`
+FROM `tb_materi`
+JOIN `tb_mapel` ON `tb_mapel`.`id_mapel` = `tb_materi`.`id_mapel`
+WHERE `id_mapel` = :id_mapel:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\ModelMateri.php(69): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Guru\MateriController.php(26): App\Models\ModelMateri->getMateriWithMapel()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\MateriController->index('3')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\MateriController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-09 13:47:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_mapel' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_materi`.*, `tb_mapel`.`nama_mapel`
+FROM `tb_materi`
+JOIN `tb_mapel` ON `tb_mapel`.`id_mapel` = `tb_materi`.`id_mapel`
+WHERE `id_mapel` = \'3\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_materi`.*, `tb_mapel`.`nama_mapel`
+FROM `tb_materi`
+JOIN `tb_mapel` ON `tb_mapel`.`id_mapel` = `tb_materi`.`id_mapel`
+WHERE `id_mapel` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_materi`.*, `tb_mapel`.`nama_mapel`
+FROM `tb_materi`
+JOIN `tb_mapel` ON `tb_mapel`.`id_mapel` = `tb_materi`.`id_mapel`
+WHERE `id_mapel` = :id_mapel:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\ModelMateri.php(69): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Guru\MateriController.php(26): App\Models\ModelMateri->getMateriWithMapel()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\MateriController->index('3')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\MateriController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-09 13:47:04 --> [Caused by] mysqli_sql_exception: Column 'id_mapel' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tb_materi`.*, `tb_mapel`.`nama_mapel`
+FROM `tb_materi`
+JOIN `tb_mapel` ON `tb_mapel`.`id_mapel` = `tb_materi`.`id_mapel`
+WHERE `id_mapel` = \'3\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_materi`.*, `tb_mapel`.`nama_mapel`
+FROM `tb_materi`
+JOIN `tb_mapel` ON `tb_mapel`.`id_mapel` = `tb_materi`.`id_mapel`
+WHERE `id_mapel` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_materi`.*, `tb_mapel`.`nama_mapel`
+FROM `tb_materi`
+JOIN `tb_mapel` ON `tb_mapel`.`id_mapel` = `tb_materi`.`id_mapel`
+WHERE `id_mapel` = \'3\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tb_materi`.*, `tb_mapel`.`nama_mapel`
+FROM `tb_materi`
+JOIN `tb_mapel` ON `tb_mapel`.`id_mapel` = `tb_materi`.`id_mapel`
+WHERE `id_mapel` = :id_mapel:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ModelMateri.php(69): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Guru\MateriController.php(26): App\Models\ModelMateri->getMateriWithMapel()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\MateriController->index('3')
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\MateriController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-09 14:44:16 --> ErrorException: Undefined variable $materi
+[Method: GET, Route: guru/materi/3/input]
+in APPPATH\Views\dashboard_guru\materi\v_input.php on line 19.
+ 1 APPPATH\Views\dashboard_guru\materi\v_input.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $materi', 'D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_guru\\materi\\v_input.php', 19)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_guru\\materi\\v_input.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_guru/materi/v_input', [], true)
+ 5 APPPATH\Views\v_template_guru.php(146): view('dashboard_guru/materi/v_input')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_guru.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_guru', [], true)
+ 9 APPPATH\Controllers\Guru\MateriController.php(42): view('v_template_guru', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\MateriController->input('3')
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\MateriController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

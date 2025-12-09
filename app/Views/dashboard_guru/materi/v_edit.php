@@ -3,18 +3,17 @@
     <div class="col-12">
       <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
-          <h3 class="card-title mb-0">Materi - <?= $mapel['nama_mapel'] ?></h3>
-          <a href="<?= base_url('guru/materi/'.$mapel['id_mapel'].'/input') ?>" class="btn btn-flat btn-primary btn-sm">
-          <i class="fas fa-plus"></i> Tambah
-          </a>
-        </div>
-          <table class="table table-bordered table-hover mb-0 text-center align-middle">
-              <thead class="table-dark">
+          <h4>Materi - <?= $mapel['nama_mapel'] ?></h4>
+            <a href="<?= base_url('guru/materi/' . $mapel['id_mapel'] . '/input') ?>" 
+              class="btn btn-primary mb-3">Tambah Materi</a>
+
+          <table class="table table-bordered">
+              <thead>
                   <tr>
-                      <th style="width: 100px;;">No Materi</th>
+                      <th>No</th>
                       <th>Judul</th>
                       <th>Link</th>
-                      <th style="width: 150px;">Aksi</th>
+                      <th>Aksi</th>
                   </tr>
               </thead>
               <tbody>
@@ -34,6 +33,8 @@
                   <?php endforeach ?>
               </tbody>
           </table>
+
+        </div>
       </div>
     </div>
   </div>

@@ -13,7 +13,7 @@ class ModelMateri extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-    'judul_materi' => 'nama_materi',
+    'judul_materi' => 'judul_materi',
     'link_materi' => 'link_materi',
     'id_mapel' => 'id_mapel'
     ];
@@ -70,11 +70,12 @@ class ModelMateri extends Model
     }
 
     // Relasi satu data
-    public function getDetailMapel($id_mapel)
+    public function getMateriByMapel($id_mapel)
     {
         return $this->select('tb_materi.*, tb_mapel.nama_mapel')
                     ->join('tb_mapel', 'tb_mapel.id_mapel = tb_materi.id_mapel')
                     ->where('tb_materi.id_mapel', $id_mapel)
-                    ->first();
+                    ->findAll();
     }
+
 }

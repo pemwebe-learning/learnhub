@@ -77,6 +77,34 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     
 });
 
+//ROUTING GURU
+$routes->group('guru', ['namespace' => 'App\Controllers\Guru'], function ($routes) {
+    // Dashboard
+    $routes->get('dashboard', 'GuruController::index');
+    $routes->get('edit/(:num)', 'GuruController::edit/$1');
+    $routes->post('update/(:num)', 'GuruController::UpdateData/$1');
+
+    //mapel
+    $routes->get('mapel', 'MapelController::index');
+
+    //materi
+    $routes->get('materi/(:num)', 'MateriController::index/$1');
+    $routes->get('materi/(:num)/input', 'MateriController::input/$1');
+    $routes->post('materi/insertdata', 'MateriController::InsertData');
+    $routes->get('materi/edit/(:num)/(:num)', 'MateriController::edit/$1/$2');
+    $routes->post('materi/update/(:num)', 'MateriController::UpdateData/$1');
+    $routes->get('materi/delete/(:num)/(:num)', 'MateriController::DeleteData/$1/$2');
+
+
+    //pengumuman
+    $routes->get('pengumuman', 'PengumumanController::index');
+
+    //nilai
+    $routes->get('nilai', 'NilaiController::index');
+
+});
+
+
 
 //ROUTING SISWA
 $routes->group('siswa', ['namespace' => 'App\Controllers\Siswa'], function ($routes) {
@@ -100,33 +128,4 @@ $routes->group('siswa', ['namespace' => 'App\Controllers\Siswa'], function ($rou
 
 
 
-//ROUTING GURU
-$routes->group('guru', ['namespace' => 'App\Controllers\Guru'], function ($routes) {
-    // Dashboard
-    $routes->get('dashboard', 'GuruController::index');
-    $routes->get('edit/(:num)', 'GuruController::edit/$1');
-    $routes->post('update/(:num)', 'GuruController::UpdateData/$1');
-
-    //kelas
-    $routes->get('kelas', 'KelasController::index');
-
-    //mapel
-    $routes->get('mapel', 'MapelController::index');
-
-    //materi
-    $routes->get('materi', 'MateriController::index');
-
-    //pengumuman
-    $routes->get('pengumuman', 'PengumumanController::index');
-
-    //siswa
-    $routes->get('siswa', 'SiswaController::index');
-
-    //tugas
-    $routes->get('tugas', 'TugasController::index');
-
-    //nilai
-    $routes->get('nilai', 'NilaiController::index');
-
-});
 
