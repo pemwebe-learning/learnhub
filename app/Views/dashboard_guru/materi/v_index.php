@@ -8,6 +8,7 @@
           <i class="fas fa-plus"></i> Tambah
           </a>
         </div>
+        
           <table class="table table-bordered table-hover mb-0 text-center align-middle">
               <thead class="table-dark">
                   <tr>
@@ -19,10 +20,18 @@
               </thead>
               <tbody>
                   <?php $no=1; foreach ($materi as $m) : ?>
+                    <?php
+                    $link = $m['link_materi'];
+
+                    // Jika tidak dimulai dengan http atau https → tambahkan https://
+                    if (!preg_match('/^https?:\/\//', $link)) {
+                        $link = 'https://' . $link;
+                    }
+                    ?>
                   <tr>
                       <td><?= $no++ ?></td>
                       <td><?= $m['judul_materi'] ?></td>
-                      <td><a href="<?= $m['link_materi'] ?>" target="_blank">Buka</a></td>
+                      <td><a href="<?= esc($link) ?>" target="_blank" rel="noopener noreferrer">Buka</a></td>
                       <td>
                           <a href="<?= base_url('guru/materi/edit/' . $mapel['id_mapel'] . '/' . $m['id_materi']) ?>" class="btn btn-warning btn-sm">Edit</a>
 
@@ -35,6 +44,7 @@
               </tbody>
           </table>
       </div>
+      <a href="<?= base_url('guru/mapel') ?>"class="btn btn-success btn-flat">Kembali</a>
     </div>
   </div>
 </div>

@@ -40,7 +40,7 @@ class ModelSiswa extends Model
     protected $validationRules      = [
         'nama_siswa'    => 'required|min_length[3]|max_length[100]',
         'email'         => 'required|valid_email|',
-        'password'      => 'required|min_length[6]|max_length[50]',
+        'password'      => 'required|min_length[6]|max_length[500]',
         'alamat'        => 'permit_empty|max_length[255]',
         'no_hp'         => 'required|numeric|min_length[10]|max_length[15]',
         'jenis_kelamin' => 'required|in_list[Laki-laki,Perempuan]',
@@ -94,15 +94,19 @@ class ModelSiswa extends Model
     protected $afterDelete    = [];
 
 
-    protected function hashPassword(array $data)
+        protected function hashPassword(array $data)
     {
-        if (!empty($data['data']['password'])) {
-            $data['data']['password'] = password_hash($data['data']['password'], PASSWORD_DEFAULT);
+        if (isset($data['data']['password'])) {
+            // Jika password sudah di-hash, panjangnya ±60 karakter
+            if (strlen($data['data']['password']) < 60) {
+                $data['data']['password'] = password_hash($data['data']['password'], PASSWORD_DEFAULT);
+            }
         } else {
             unset($data['data']['password']);
         }
         return $data;
     }
+
 
     public function getSiswaWithKelas()
     {

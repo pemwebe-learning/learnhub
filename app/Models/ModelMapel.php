@@ -103,5 +103,14 @@ class ModelMapel extends Model
                     ->findAll();
     }
 
+    public function getMapelByKelas($id_kelas)
+    {
+        return $this->select('tb_mapel.*, tb_kelas.nama_kelas, tb_kelas.nama_kelas')
+                    ->join('tb_kelas', 'tb_kelas.id_kelas = tb_mapel.id_kelas')
+                    ->join('tb_guru', 'tb_guru.id_guru = tb_mapel.id_guru')
+                    ->where('tb_mapel.id_kelas', $id_kelas)
+                    ->findAll();
+    }
+
 
 }

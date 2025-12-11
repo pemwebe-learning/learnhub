@@ -14,6 +14,10 @@ $routes->get('logout_admin', 'LoginAdmin::logout');
 $routes->get('login_guru', 'LoginGuru::index');
 $routes->post('proses_login_guru', 'LoginGuru::prosesLoginGuru');
 $routes->get('logout_guru', 'LoginGuru::logout');
+//Login Siswa
+$routes->get('login_siswa', 'LoginSiswa::index');
+$routes->post('proses_login_siswa', 'LoginSiswa::prosesLoginSiswa');
+$routes->get('logout_siswa', 'LoginSiswa::logout');
 
 // ROUTING ADMIN
 $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
@@ -99,9 +103,6 @@ $routes->group('guru', ['namespace' => 'App\Controllers\Guru'], function ($route
     //pengumuman
     $routes->get('pengumuman', 'PengumumanController::index');
 
-    //nilai
-    $routes->get('nilai', 'NilaiController::index');
-
 });
 
 
@@ -110,19 +111,16 @@ $routes->group('guru', ['namespace' => 'App\Controllers\Guru'], function ($route
 $routes->group('siswa', ['namespace' => 'App\Controllers\Siswa'], function ($routes) {
     // Dashboard
     $routes->get('dashboard', 'SiswaController::index');
-    $routes->get('edit/', 'GuruController::edit/$1');
+    $routes->get('edit/(:num)', 'SiswaController::edit/$1');
+     $routes->post('update/(:num)', 'SiswaController::UpdateData/$1');
     
 
+    //mapel
+    $routes->get('mapel', 'MapelController::index');
+
     //materi
-    $routes->get('materi', 'MateriController::index');
-
-    //Tugas
-    $routes->get('tugas', 'TugasController::index');
-
-    //Nilai
-    $routes->get('nilai', 'NilaiController::index');
-
-    //Pengumuman
+    $routes->get('materi/(:num)', 'MateriController::index/$1');
+    //pengumuman
     $routes->get('pengumuman', 'PengumumanController::index');
 });
 

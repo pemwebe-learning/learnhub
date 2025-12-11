@@ -1,41 +1,45 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-12">
-      <div class="card">
-        <div class="card-header d-flex justify-content-between align-items-center">
-          <h4>Materi - <?= $mapel['nama_mapel'] ?></h4>
-            <a href="<?= base_url('guru/materi/' . $mapel['id_mapel'] . '/input') ?>" 
-              class="btn btn-primary mb-3">Tambah Materi</a>
+<div class="col-md-12">
+    <div class="card card-outline card-primary">
+              <div class="card-header">
+                <h3 class="card-title"><?= $judul ?></h3>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+              <?php 
+              session();
+              $validation = \Config\Services::validation();
+              ?>
+              <?php echo form_open_multipart('guru/materi/update/'. $materi['id_materi']) ?>
 
-          <table class="table table-bordered">
-              <thead>
-                  <tr>
-                      <th>No</th>
-                      <th>Judul</th>
-                      <th>Link</th>
-                      <th>Aksi</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <?php $no=1; foreach ($materi as $m) : ?>
-                  <tr>
-                      <td><?= $no++ ?></td>
-                      <td><?= $m['judul_materi'] ?></td>
-                      <td><a href="<?= $m['link_materi'] ?>" target="_blank">Buka</a></td>
-                      <td>
-                          <a href="<?= base_url('guru/materi/edit/' . $mapel['id_mapel'] . '/' . $m['id_materi']) ?>" class="btn btn-warning btn-sm">Edit</a>
+                <div class="row">
+                  <div class="col-sm-3">
+                  <div class="form-group">
+                    <label>judul materi</label>
+                    <input name="judul_materi" value="<?= $materi['judul_materi'] ?>" placeholder="judul materi" class="form-control">
+                    <p class="text-danger"><?= $validation->hasError('judul_materi') ? $validation->getError('judul_materi') : '' ?></p>
+                  </div>
+                  </div>
+                  <div class="col-sm-3">
+                  <div class="form-group">
+                    <label>Link Materi</label>
+                    <input name="link_materi" value="<?= $materi['link_materi'] ?>" placeholder="Kelas" class="form-control">
+                    <p class="text-danger"><?= $validation->hasError('link_materi') ? $validation->getError('link_materi') : '' ?></p>
+                  </div>
+                  </div>
+                  <div class="col-sm-3">
+                  <div class="form-group">
+                    <label>Kelas</label>
+                    <input value="<?= $mapel['nama_mapel'] ?>" placeholder="Kelas" class="form-control" readonly>
+                  </div>
+                  </div>
+                  <input type="hidden" name="id_mapel" value="<?= $mapel['id_mapel'] ?>">
+               </div>
+            <button class="btn btn-primary btn-flat" type="submit">Simpan</button>
+            <a href="<?= base_url('guru/materi/'. $materi['id_mapel']) ?>"class="btn btn-success btn-flat">Kembali</a>
 
-                          <a href="<?= base_url('guru/materi/delete/' . $mapel['id_mapel'] . '/' . $m['id_materi']) ?>" 
-                            class="btn btn-danger btn-sm"
-                            onclick="return confirm('Yakin hapus?')">Hapus</a>
-                      </td>
-                  </tr>
-                  <?php endforeach ?>
-              </tbody>
-          </table>
+              <?php echo form_close() ?>
 
         </div>
-      </div>
     </div>
-  </div>
 </div>

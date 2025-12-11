@@ -142,9 +142,11 @@ class SiswaController extends BaseController
         ];
 
         // Password opsional
-        if (!empty($this->request->getPost('password'))) {
-            $data['password'] = password_hash($this->request->getPost('password'), PASSWORD_DEFAULT);
+        $password = $this->request->getPost('password');
+        if (!empty($password)) {
+            $data['password'] = password_hash($password, PASSWORD_DEFAULT);
         }
+
 
         // Foto opsional
         if ($file->getError() != 4) {

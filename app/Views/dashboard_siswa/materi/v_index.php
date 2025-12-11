@@ -1,49 +1,42 @@
 <div class="container-fluid">
-<div class="row">
-<div class="col-12">
-<div class="card">
-  <div class="card-header bg-warning text-white">
-    <h3 class="card-title">Materi Pelajaran</h3>
-  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="card-title mb-0">Materi - <?= $mapel['nama_mapel'] ?></h3>
+          <a href="<?= base_url('guru/materi/'.$mapel['id_mapel'].'/input') ?>" class="btn btn-flat btn-primary btn-sm">
+          <i class="fas fa-plus"></i> Tambah
+          </a>
+        </div>
+        
+          <table class="table table-bordered table-hover mb-0 text-center align-middle">
+              <thead class="table-dark">
+                  <tr>
+                      <th style="width: 100px;;">No Materi</th>
+                      <th>Judul</th>
+                      <th>Link</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <?php $no=1; foreach ($materi as $m) : ?>
+                    <?php
+                    $link = $m['link_materi'];
 
-  <div class="card-body">
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>No</th>
-          <th>Judul Materi</th>
-          <th>Mata Pelajaran</th>
-          <th>Guru Pengajar</th>
-          <th>File / Link</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Pengenalan Jaringan Komputer</td>
-          <td>TIK</td>
-          <td>Pak Dwi Santoso</td>
-          <td>
-            <a href="#" class="btn btn-sm btn-primary">
-              <i class="fa-solid fa-download"></i> Unduh
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Algoritma Dasar</td>
-          <td>Informatika</td>
-          <td>Bu Rani</td>
-          <td>
-            <a href="#" class="btn btn-sm btn-primary">
-              <i class="fa-solid fa-link"></i> Lihat
-            </a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+                    // Jika tidak dimulai dengan http atau https → tambahkan https://
+                    if (!preg_match('/^https?:\/\//', $link)) {
+                        $link = 'https://' . $link;
+                    }
+                    ?>
+                  <tr>
+                      <td><?= $no++ ?></td>
+                      <td><?= $m['judul_materi'] ?></td>
+                      <td><a href="<?= esc($link) ?>" target="_blank" rel="noopener noreferrer">Buka</a></td>
+                  </tr>
+                  <?php endforeach ?>
+              </tbody>
+          </table>
+      </div>
+      <a href="<?= base_url('siswa/mapel') ?>"class="btn btn-success btn-flat">Kembali</a>
+    </div>
   </div>
-</div>
-</div>
-</div>
 </div>

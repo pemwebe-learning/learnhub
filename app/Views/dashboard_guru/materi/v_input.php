@@ -36,7 +36,7 @@
                   <input type="hidden" name="id_mapel" value="<?= $mapel['id_mapel'] ?>">
                </div>
             <button class="btn btn-primary btn-flat" type="submit">Simpan</button>
-            <a href="<?= base_url('admin/kelas') ?>"class="btn btn-success btn-flat">Kembali</a>
+            <a href="<?= base_url('guru/materi/'. $mapel['id_mapel']) ?>"class="btn btn-success btn-flat">Kembali</a>
 
               <?php echo form_close() ?>
 

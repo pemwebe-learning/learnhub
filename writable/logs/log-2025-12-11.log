@@ -1,0 +1,65 @@
+CRITICAL - 2025-12-11 05:05:33 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: guru/materi/edit/3/2]
+in APPPATH\Views\dashboard_guru\materi\v_edit.php on line 23.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_guru/materi/v_edit', [], true)
+ 4 APPPATH\Views\v_template_guru.php(146): view('dashboard_guru/materi/v_edit')
+ 5 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_guru.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_guru', [], true)
+ 8 APPPATH\Controllers\Guru\MateriController.php(78): view('v_template_guru', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\MateriController->edit('3', '2')
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\MateriController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-11 05:18:25 --> ErrorException: Undefined variable $materi
+[Method: GET, Route: guru/materi/3/input]
+in APPPATH\Views\dashboard_guru\materi\v_input.php on line 39.
+ 1 APPPATH\Views\dashboard_guru\materi\v_input.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $materi', 'D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_guru\\materi\\v_input.php', 39)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\dashboard_guru\\materi\\v_input.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard_guru/materi/v_input', [], true)
+ 5 APPPATH\Views\v_template_guru.php(146): view('dashboard_guru/materi/v_input')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\learnhub\\app\\Views\\v_template_guru.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('v_template_guru', [], true)
+ 9 APPPATH\Controllers\Guru\MateriController.php(42): view('v_template_guru', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\MateriController->input('3')
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\MateriController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-11 05:19:41 --> ErrorException: Undefined variable $id_materi
+[Method: GET, Route: guru/materi/3/input]
+in APPPATH\Controllers\Guru\MateriController.php on line 41.
+ 1 APPPATH\Controllers\Guru\MateriController.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_materi', 'D:\\laragon\\www\\learnhub\\app\\Controllers\\Guru\\MateriController.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Guru\MateriController->input('3')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guru\MateriController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-11 08:24:42 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\ModelKelas::getSiswaWithKelas
+[Method: GET, Route: siswa/dashboard]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Siswa\SiswaController.php(26): CodeIgniter\Model->__call('getSiswaWithKelas', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa\SiswaController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa\SiswaController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-11 08:34:31 --> ErrorException: Undefined array key "nama_kelas"
+[Method: POST, Route: proses_login_siswa]
+in APPPATH\Controllers\LoginSiswa.php on line 64.
+ 1 APPPATH\Controllers\LoginSiswa.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kelas"', 'D:\\laragon\\www\\learnhub\\app\\Controllers\\LoginSiswa.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginSiswa->prosesLoginSiswa()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginSiswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

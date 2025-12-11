@@ -30,7 +30,7 @@
 
     <div class="header-buttons fade-in-buttons">
       <a class="btn-header" href="<?= base_url('login_guru')?>">Login Guru</a>
-      <a class="btn-header" href="<?= base_url('siswa/dashboard')?>">Login Siswa</a>
+      <a class="btn-header" href="<?= base_url('login_siswa')?>">Login Siswa</a>
       <a class="btn-header" href="<?= base_url('login_admin')?>">Login Admin</a>
     </div>
   </header>

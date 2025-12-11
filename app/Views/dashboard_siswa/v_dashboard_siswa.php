@@ -1,47 +1,73 @@
-<div class="row">
-  <!-- Box 1: Jumlah Tugas -->
-  <div class="col-12 col-sm-6 col-md-3">
-    <div class="info-box">
-      <span class="info-box-icon bg-info elevation-1"><i class="fa-solid fa-book-open"></i></span>
-      <div class="info-box-content">
-        <span class="info-box-text">Tugas Aktif</span>
-        <span class="info-box-number">5</span>
-      </div>
-    </div>
-  </div>
+<div class="col-md-12">
+    <div class="card card-outline card-primary">
+        
+        <div class="card-header">
+            <h1 class="card-title">
+                SELAMAT DATANG <?= session()->get('nama_siswa') ?>
+            </h1>
+        </div>
 
-  <!-- Box 2: Nilai Rata-rata -->
-  <div class="col-12 col-sm-6 col-md-3">
-    <div class="info-box mb-3">
-      <span class="info-box-icon bg-success elevation-1"><i class="fa-solid fa-chart-line"></i></span>
-      <div class="info-box-content">
-        <span class="info-box-text">Nilai Rata-rata</span>
-        <span class="info-box-number">87.5</span>
-      </div>
-    </div>
-  </div>
+        <div class="card-body">
+            <div class="row">
 
-  <div class="clearfix hidden-md-up"></div>
+                <!-- FOTO -->
+                <div class="col-sm-12 text-center mb-4">
+                    <img src="<?= base_url('uploads/siswa/' . session()->get('foto')) ?>" 
+                         width="200px" class="img-thumbnail">
+                </div>
 
-  <!-- Box 3: Materi -->
-  <div class="col-12 col-sm-6 col-md-3">
-    <div class="info-box mb-3">
-      <span class="info-box-icon bg-warning elevation-1"><i class="fa-solid fa-file-lines"></i></span>
-      <div class="info-box-content">
-        <span class="info-box-text">Materi Baru</span>
-        <span class="info-box-number">12</span>
-      </div>
-    </div>
-  </div>
+                <!-- DATA SISWA -->
+                <div class="col-sm-12">
+                    <table class="table table-bordered">
 
-  <!-- Box 4: Pengumuman -->
-  <div class="col-12 col-sm-6 col-md-3">
-    <div class="info-box mb-3">
-      <span class="info-box-icon bg-danger elevation-1"><i class="fa-solid fa-bullhorn"></i></span>
-      <div class="info-box-content">
-        <span class="info-box-text">Pengumuman Baru</span>
-        <span class="info-box-number">3</span>
-      </div>
+                        <tr>
+                            <th width="200px">Nama Siswa</th>
+                            <th width="30px">:</th>
+                            <td><?= session()->get('nama_siswa') ?></td>
+                        </tr>
+
+                        <tr>
+                            <th>Email</th>
+                            <th>:</th>
+                            <td><?= session()->get('email') ?></td>
+                        </tr>
+
+                        <tr>
+                            <th>Alamat Rumah</th>
+                            <th>:</th>
+                            <td><?= session()->get('alamat') ?></td>
+                        </tr>
+
+                        <tr>
+                            <th>Jenis Kelamin</th>
+                            <th>:</th>
+                            <td><?= session()->get('jenis_kelamin') ?></td>
+                        </tr>
+
+                        <tr>
+                            <th>Nomor HP</th>
+                            <th>:</th>
+                            <td><?= session()->get('no_hp') ?></td>
+                        </tr>
+
+                        <?php if (session()->get('nama_kelas')) : ?>
+                        <tr>
+                            <th>Kelas</th>
+                            <th>:</th>
+                            <td><?= session()->get('nama_kelas') ?></td>
+                        </tr>
+                        <?php endif; ?>
+
+                    </table>
+
+                    <a href="<?= base_url('siswa/edit/' . session()->get('id_siswa')) ?>" 
+                       class="btn btn-success btn-flat">
+                        <i class="fas fa-edit"></i> Edit Profile
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
     </div>
-  </div>
 </div>

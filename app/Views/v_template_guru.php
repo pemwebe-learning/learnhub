@@ -31,10 +31,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?= base_url('/') ?>" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="<?= base_url('guru/dashboard') ?>" class="nav-link">Home</a>
       </li>
     </ul>
 
@@ -86,23 +83,15 @@
           </li>
           <li class="nav-item menu-open">
             <a href="<?= base_url('guru/mapel') ?>" class="nav-link <?= $menu =='mapel' ? 'active' : '' ?>">
-              <i class="fa-solid fa-landmark"></i>
+              <i class="fa-solid fa-book"></i>
               <p>
                 Mapel
               </p>
             </a>
           </li>   
           <li class="nav-item menu-open">
-            <a href="<?= base_url('guru/nilai') ?>" class="nav-link <?= $menu =='nilai' ? 'active' : '' ?>">
-              <i class="fa-solid fa-user"></i>
-              <p>
-                Nilai
-              </p>
-            </a>
-          </li> 
-          <li class="nav-item menu-open">
             <a href="<?= base_url('guru/pengumuman') ?>" class="nav-link <?= $menu =='pengumuman' ? 'active' : '' ?>">
-              <i class="fa-solid fa-landmark"></i>
+              <i class="fa-solid fa-bullhorn"></i>
               <p>
                 Pengumuman
               </p>
@@ -123,12 +112,6 @@
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0">Dashboard Siswa</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v2</li>
-            </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -164,11 +147,7 @@
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.2.0
-    </div>
+    <strong>Copyright @learningHub 2025</strong>
   </footer>
 </div>
 <!-- ./wrapper -->

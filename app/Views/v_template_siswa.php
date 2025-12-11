@@ -31,45 +31,15 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?= base_url('/') ?>" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="<?= base_url('siswa/dashboard') ?>" class="nav-link">Home</a>
       </li>
     </ul>
 
     <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
+    <ul class="navbar-nav ml-auto">  
       <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-          <i class="fas fa-search"></i>
-        </a>
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
+        <a class="nav-link" href="<?= base_url('logout_admin') ?>">
+          <i class="fas fa-sign-out-alt"></i> Log Out
         </a>
       </li>
     </ul>
@@ -87,13 +57,14 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="<?= base_url('AdminLTE') ?>/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="<?= base_url('uploads/siswa/' . session()->get('foto')) ?>" 
+          class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
-        </div>
+        <a href="#" class="d-block"><?= session()->get('nama_siswa') ?></a>
+      </div>
       </div>
       
       <!-- Sidebar Menu -->
@@ -102,7 +73,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="<?= base_url('admin/') ?>" class="nav-link <?= $menu =='dashboard_admin' ? 'active' : '' ?>">
+            <a href="<?= base_url('siswa/dashboard') ?>" class="nav-link <?= $menu =='dashboard_admin' ? 'active' : '' ?>">
               <i class="fa-solid fa-gauge"></i>
               <p>
                 Dashboard
@@ -110,26 +81,10 @@
             </a>
           </li>
           <li class="nav-item menu-open">
-            <a href="<?= base_url('siswa/materi') ?>" class="nav-link <?= $menu =='materi' ? 'active' : '' ?>">
+            <a href="<?= base_url('siswa/mapel') ?>" class="nav-link <?= $menu =='materi' ? 'active' : '' ?>">
               <i class="fa-solid fa-book"></i>
               <p>
-                Materi
-              </p>
-            </a>
-          </li>
-          <li class="nav-item menu-open">
-            <a href="<?= base_url('siswa/tugas') ?>" class="nav-link <?= $menu =='tugas' ? 'active' : '' ?>">
-              <i class="fa-solid fa-list-check"></i>
-              <p>
-                Tugas
-              </p>
-            </a>
-          </li>
-          <li class="nav-item menu-open">
-            <a href="<?= base_url('siswa/nilai') ?>" class="nav-link <?= $menu =='nilai' ? 'active' : '' ?>">
-              <i class="fa-solid fa-check"></i>
-              <p>
-                Nilai
+                Mapel
               </p>
             </a>
           </li>
@@ -156,12 +111,6 @@
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0">Dashboard Siswa</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v2</li>
-            </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -197,11 +146,7 @@
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.2.0
-    </div>
+    <strong>Copyright @learningHub 2025</strong>
   </footer>
 </div>
 <!-- ./wrapper -->
