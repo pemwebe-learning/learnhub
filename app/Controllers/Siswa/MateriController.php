@@ -26,7 +26,7 @@ class MateriController extends BaseController
             'mapel' => $this->ModelMapel->find($id_mapel),
             'materi' => $this->ModelMateri->getMateriByMapel($id_mapel),
         ];
-        return view('v_template_guru', $data);
+        return view('v_template_siswa', $data);
     }
 
 }

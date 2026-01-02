@@ -11,7 +11,7 @@
         
 
         <div class="card-body p-0">
-          <table class="table table-bordered table-hover mb-0 text-center align-middle">
+          <table id="example1" class="table table-bordered table-hover mb-0 text-center align-middle">
             <thead class="table-dark">
               <tr>
                 <th style="width: 100px">No</th>
@@ -28,8 +28,8 @@
                     <td><?= esc($a['nama_mapel']) ?></td>
                     <td><?= esc($a['nama_kelas']) ?></td>
                     <td>
-                    <a href="<?= base_url('siswa/materi/'. $a['id_mapel']) ?>" class="btn btn-warning btn-sm" title="Edit">
-                      <i class="fas fa-edit"></i>
+                    <a href="<?= base_url('siswa/materi/'. $a['id_mapel']) ?>" class="btn btn-success btn-sm" title="Edit">
+                      <i class="fas fa-eye"></i> Lihat materi
                     </a>
                     </td>
                 </tr>

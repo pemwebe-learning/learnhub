@@ -60,6 +60,7 @@ class LoginGuru extends BaseController
             'jenis_kelamin' => $user['jenis_kelamin'],
             'alamat' => $user['alamat'],
             'no_hp' => $user['no_hp'],
+            'role' => 'guru',
             'logged_in' => true
         ]);
 

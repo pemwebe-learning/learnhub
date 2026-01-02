@@ -9,7 +9,7 @@
           </a>
         </div>
         
-          <table class="table table-bordered table-hover mb-0 text-center align-middle">
+          <table id="example1" class="table table-bordered table-hover mb-0 text-center align-middle">
               <thead class="table-dark">
                   <tr>
                       <th style="width: 100px;;">No Materi</th>

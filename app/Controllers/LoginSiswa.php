@@ -66,6 +66,7 @@ class LoginSiswa extends BaseController
             'no_hp' => $user['no_hp'],
             'id_kelas' => $user['id_kelas'],
             'nama_kelas'    => $user['nama_kelas'],
+            'role' => 'siswa',
             'logged_in' => true
         ]);
 

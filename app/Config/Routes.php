@@ -20,7 +20,7 @@ $routes->post('proses_login_siswa', 'LoginSiswa::prosesLoginSiswa');
 $routes->get('logout_siswa', 'LoginSiswa::logout');
 
 // ROUTING ADMIN
-$routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
+$routes->group('admin', ['namespace' => 'App\Controllers\Admin', 'filter' => 'auth'], function ($routes) {
 
     // Dashboard
     $routes->get('dashboard', 'AdminController::index');
@@ -78,11 +78,14 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->get('mapel/edit/(:num)', 'MapelController::edit/$1');
     $routes->post('mapel/update/(:num)', 'MapelController::UpdateData/$1');
     $routes->get('mapel/delete/(:num)', 'MapelController::DeleteData/$1');
+
+    //looker studio
+    $routes->get('looker', 'LookerController::index');
     
 });
 
 //ROUTING GURU
-$routes->group('guru', ['namespace' => 'App\Controllers\Guru'], function ($routes) {
+$routes->group('guru', ['namespace' => 'App\Controllers\Guru', 'filter' => 'auth'], function ($routes) {
     // Dashboard
     $routes->get('dashboard', 'GuruController::index');
     $routes->get('edit/(:num)', 'GuruController::edit/$1');
@@ -108,7 +111,7 @@ $routes->group('guru', ['namespace' => 'App\Controllers\Guru'], function ($route
 
 
 //ROUTING SISWA
-$routes->group('siswa', ['namespace' => 'App\Controllers\Siswa'], function ($routes) {
+$routes->group('siswa', ['namespace' => 'App\Controllers\Siswa', 'filter' => 'auth'], function ($routes) {
     // Dashboard
     $routes->get('dashboard', 'SiswaController::index');
     $routes->get('edit/(:num)', 'SiswaController::edit/$1');

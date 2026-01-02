@@ -12,7 +12,7 @@
       </div>
 
         <div class="card-body p-0">
-          <table class="table table-bordered table-hover mb-0 text-center align-middle">
+          <table id="example1" class="table table-bordered table-hover mb-0 text-center align-middle">
             <thead class="table-dark">
               <tr>
                 <th style="width: 50px">No</th>
